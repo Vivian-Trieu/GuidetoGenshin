@@ -89,29 +89,23 @@ class _MyHomePageState extends State<MyHomePage> {
           style: TextStyle(color: Color(0xFFd4d4dc)),
         ),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Characters',
-              style: TextStyle(
-                color: Color(0xFFd4d4dc),
-                fontSize: 45,
-              )
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      body: GridView.count(
+        primary: false,
+        padding: const EdgeInsets.all(20),
+        crossAxisSpacing: 10,
+        mainAxisSpacing: 10,
+        crossAxisCount: 4,
+        children: <Widget>[
+          Container(
+            padding: const EdgeInsets.all(8),
+            child: Column(children: <Widget> [
+              Image.asset('assets/image/Character_Traveler_Thumb.png'),
+              const Text('Traveler')
+            ],
+            )
+          )
+        ],
+      )
     );
   }
 }
