@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(
             'Characters',
             style: TextStyle(
-              color: Color(0xFFd4d4dc),
+              color: Colors.white,
               fontSize: 30,
             )
         ),
@@ -102,6 +102,8 @@ class Character {
   final String buildTitle;
   final String artifactSet;
   final String artifactImg;
+  final String secondArtifactSet;
+  final String secondArtifactImg;
   final String sandsPriority;
   final String gobletPriority;
   final String circletPriority;
@@ -132,6 +134,8 @@ class Character {
       required this.buildTitle,
       required this.artifactSet,
       required this.artifactImg,
+      required this.secondArtifactSet,
+      required this.secondArtifactImg,
       required this.sandsPriority,
       required this.gobletPriority,
       required this.circletPriority,
@@ -164,6 +168,8 @@ class Character {
         buildTitle: 'Geo Support Build',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -192,6 +198,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -220,6 +228,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -248,6 +258,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -276,6 +288,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -304,6 +318,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -332,6 +348,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -360,6 +378,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -388,6 +408,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -416,6 +438,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -444,6 +468,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -470,26 +496,28 @@ class Character {
         rarity: '5-star',
         imglink: 'https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Character_Hu_Tao_Thumb.png',
         buildTitle: 'Pyro DPS',
-        artifactSet: '',
-        artifactImg: '',
-        sandsPriority: '',
-        gobletPriority: '',
-        circletPriority: '',
-        substats: '',
-        bestWeapon: '',
-        weaponImg: '',
-        localSpecialty: '',
-        gemSliver: '',
-        gemFragment: '',
-        gemChunk: '',
-        gemGemstone: '',
-        normalBoss: '',
-        smallMobDrop: '',
-        mediumMobDrop: '',
-        largeMobDrop: '',
-        teachingsBook: '',
-        guideBook: '',
-        philosophiesBook: '',
+        artifactSet: 'Crimson Witch of Flames',
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Witch%27s_Flower_of_Blaze.png',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
+        sandsPriority: 'HP%',
+        gobletPriority: 'HP% / Pyro DMG Bonus',
+        circletPriority: 'HP% / CRIT DMG / CRIT Rate',
+        substats: 'HP / CRIT DMG / Crit Rate',
+        bestWeapon: 'Staff of Homa',
+        weaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/1/17/Weapon_Staff_of_Homa.png/revision/latest?cb=20210225200935',
+        localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/3/37/Item_Silk_Flower.png',
+        gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/5/51/Item_Agnidus_Agate_Sliver.png',
+        gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Item_Agnidus_Agate_Fragment.png',
+        gemChunk: 'https://static.wikia.nocookie.net/gensin-impact/images/0/00/Item_Agnidus_Agate_Chunk.png',
+        gemGemstone: 'https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Item_Agnidus_Agate_Gemstone.png',
+        normalBoss: 'https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Item_Juvenile_Jade.png',
+        smallMobDrop: 'https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Item_Whopperflower_Nectar.png',
+        mediumMobDrop: 'https://static.wikia.nocookie.net/gensin-impact/images/4/46/Item_Shimmering_Nectar.png',
+        largeMobDrop: 'https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Item_Energy_Nectar.png',
+        teachingsBook: 'https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Item_Teachings_of_Diligence.png',
+        guideBook: 'https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Item_Guide_to_Diligence.png',
+        philosophiesBook: 'https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Item_Philosophies_of_Diligence.png',
         weeklyBoss: '',
     ),
     const Character( name: 'Jean',
@@ -499,6 +527,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -527,6 +557,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -555,6 +587,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -583,6 +617,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -611,6 +647,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -639,6 +677,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -667,6 +707,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -695,6 +737,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -723,6 +767,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -751,6 +797,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -779,6 +827,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -807,6 +857,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -835,6 +887,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -863,6 +917,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -891,6 +947,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -919,6 +977,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -947,6 +1007,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -975,6 +1037,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -1003,6 +1067,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -1031,6 +1097,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -1059,6 +1127,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -1087,6 +1157,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -1115,6 +1187,8 @@ class Character {
         buildTitle: 'Anemo Main DPS',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -1143,6 +1217,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -1171,6 +1247,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -1199,6 +1277,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -1227,6 +1307,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -1255,6 +1337,8 @@ class Character {
         buildTitle: '',
         artifactSet: '',
         artifactImg: '',
+        secondArtifactSet: '',
+        secondArtifactImg: '',
         sandsPriority: '',
         gobletPriority: '',
         circletPriority: '',
@@ -1320,6 +1404,7 @@ class CharacterCard extends StatelessWidget {
 
 class Detail extends StatelessWidget {
   final Character character;
+  final double imageSize = 90;
   Detail({required this.character});
 
   @override
@@ -1328,17 +1413,297 @@ class Detail extends StatelessWidget {
       appBar: AppBar(
         title: Text("${character.name}"),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      body: ListView(
         children: <Widget>[
           Center(
-            child:
-              Text(
-                "${character.buildTitle}",
-                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20.0),
+              child: Container(
+                padding: const EdgeInsets.all(10),
+                child: Text("${character.buildTitle}", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 25.0)),
               ),
-
           ),
+          // Character Image
+          Center(
+            child: Container(
+              padding: const EdgeInsets.all(10.0),
+              child: Image.network('${character.imglink}'),
+              height: 200,
+              width: 200,
+            )
+          ),
+          Center(
+            child:
+              Padding(
+                padding: const EdgeInsets.fromLTRB(10, 20, 10, 10),
+                child: Text("Ascension Materials", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20)),
+              ),
+          ),
+          // Gems
+          Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    Container(
+                      child: Image.network('${character.gemSliver}'),
+                      height: imageSize,
+                      width: imageSize,
+                    ),
+                    Text("1",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20)),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Container(
+                      child: Image.network('${character.gemFragment}'),
+                      height: imageSize,
+                      width: imageSize,
+                    ),
+                    Text("9",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20)),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Container(
+                      child: Image.network('${character.gemChunk}'),
+                      height: imageSize,
+                      width: imageSize,
+                    ),
+                    Text("9",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20)),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Container(
+                      child: Image.network('${character.gemGemstone}'),
+                      height: imageSize,
+                      width: imageSize,
+                    ),
+                    Text("6",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20)),
+                  ],
+                ),
+              ]
+            ),
+          ),
+          // Mob Drops
+          Center(
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    children: [
+                      Container(
+                        child: Image.network('${character.smallMobDrop}'),
+                        height: imageSize,
+                        width: imageSize,
+                      ),
+                      Text("18",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20)),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Container(
+                        child: Image.network('${character.mediumMobDrop}'),
+                        height: imageSize,
+                        width: imageSize,
+                      ),
+                      Text("30",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20)),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Container(
+                        child: Image.network('${character.largeMobDrop}'),
+                        height: imageSize,
+                        width: imageSize,
+                      ),
+                      Text("36",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20)),
+                    ],
+                  ),
+                ]
+            ),
+          ),
+          // Local Specialty + Normal Boss Drop
+          Center(
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                Column(
+                  children: [
+                    Container(
+                      child: Image.network('${character.localSpecialty}'),
+                      height: imageSize,
+                      width: imageSize,
+                    ),
+                    Text("168",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20)),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Container(
+                      child: Image.network('${character.normalBoss}'),
+                      height: imageSize,
+                      width: imageSize,
+                    ),
+                    Text("46",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20)),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          // Talent Materials
+          Center(
+            child:
+            Padding(
+              padding: const EdgeInsets.fromLTRB(10, 30, 10, 10),
+              child: Text("Talent Materials", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20)),
+            ),
+          ),
+          Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    Container(
+                      child: Image.network('${character.teachingsBook}'),
+                      height: imageSize,
+                      width: imageSize,
+                    ),
+                    Text("9",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20)),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Container(
+                      child: Image.network('${character.guideBook}'),
+                      height: imageSize,
+                      width: imageSize,
+                    ),
+                    Text("63",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20)),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Container(
+                      child: Image.network('${character.philosophiesBook}'),
+                      height: imageSize,
+                      width: imageSize,
+                    ),
+                    Text("114",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20)),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Center(
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    children: [
+                      Container(
+                        child: Image.network('${character.smallMobDrop}'),
+                        height: imageSize,
+                        width: imageSize,
+                      ),
+                      Text("18",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20)),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Container(
+                        child: Image.network('${character.mediumMobDrop}'),
+                        height: imageSize,
+                        width: imageSize,
+                      ),
+                      Text("30",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20)),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Container(
+                        child: Image.network('${character.largeMobDrop}'),
+                        height: imageSize,
+                        width: imageSize,
+                      ),
+                      Text("36",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20)),
+                    ],
+                  ),
+                ]
+            ),
+          ),
+      ]),
+    );
+
+          /*Text("Best Weapon", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20)),
+          Container(
+            padding: const EdgeInsets.all(10.0),
+            child: Image.network('${character.weaponImg}'),
+            height: 150,
+            width: 150,
+          ),
+          Text("${character.bestWeapon}", style: TextStyle(color: Colors.white, fontSize: 15)),*/
           /*Center(
             child: ElevatedButton(
               onPressed: () {
@@ -1347,8 +1712,6 @@ class Detail extends StatelessWidget {
               child: Text('Back'),
             ),
           ),*/
-        ],
-      ),
-    );
+
   }
 }
