@@ -20,26 +20,26 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  MaterialColor createMaterialColor(Color color) {
-    List strengths = <double>[0.05];
-    final swatch = <int, Color>{};
-    final int r = color.red, g = color.green, b = color.blue;
+}
 
-    for(int i = 1; i < 10; i++) {
-      strengths.add(0.1 * i);
-    }
-    strengths.forEach((strength) {
-      final double ds = 0.5 - strength;
-      swatch[(strength * 1000).round()] = Color.fromRGBO(
+MaterialColor createMaterialColor(Color color) {
+  List strengths = <double>[0.05];
+  final swatch = <int, Color>{};
+  final int r = color.red, g = color.green, b = color.blue;
+
+  for(int i = 1; i < 10; i++) {
+    strengths.add(0.1 * i);
+  }
+  strengths.forEach((strength) {
+    final double ds = 0.5 - strength;
+    swatch[(strength * 1000).round()] = Color.fromRGBO(
         r + ((ds < 0 ? r : (255 - r)) * ds).round(),
         g + ((ds < 0 ? g : (255 - g)) *ds).round(),
         b + ((ds < 0 ? b : (255 - b)) *ds).round(),
         1
-      );
-    });
-    return MaterialColor(color.value, swatch);
-  }
-
+    );
+  });
+  return MaterialColor(color.value, swatch);
 }
 
 class MyHomePage extends StatefulWidget {
@@ -1472,440 +1472,699 @@ class Detail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("${character.name}"),
+    return MaterialApp(
+      theme: ThemeData(
+        scaffoldBackgroundColor: (Color(0xFF272852)),
+        primarySwatch: createMaterialColor(Color(0xFF272852)),
+        highlightColor: Colors.transparent,
+        splashColor: Colors.transparent,
       ),
-      body: ListView(
-        children: <Widget>[
-          // Character Image
-          Center(
-            child: Container(
-              padding: const EdgeInsets.fromLTRB(10, 15, 10, 15),
-              child: Image.network('${character.imglink}'),
-              height: 200,
-              width: 200,
-            )
-          ),
-          Center(
-            child: Container(
-              padding: const EdgeInsets.all(10),
-              child: Text(
-                  "Material Guide",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 25.0
-                  )
+      home: DefaultTabController(
+        length: 3,
+        child: Scaffold(
+          appBar: AppBar(
+            centerTitle: true,
+            title: Text("${character.name}"),
+            bottom: TabBar(
+              indicator: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+                  color: Color(0xFF3d3e63),
               ),
-            ),
-          ),
-          Center(
-            child:
-              Padding(
-                padding: const EdgeInsets.all(10),
-                child: Text(
-                    "Ascension Materials",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontStyle: FontStyle.italic,
-                        fontSize: 20,
-                    ),
-                ),
-              ),
-          ),
-          // Gems
-          Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Column(
-                  children: [
-                    Container(
-                      child: Image.network('${character.gemSliver}'),
-                      height: imageSize,
-                      width: imageSize,
-                      decoration: BoxDecoration(
-                        color: Color(0xFF3d3e63),
-                        borderRadius: BorderRadius.all(Radius.circular(15))
+              tabs: [
+                Tab(
+                    child: Padding(
+                      padding: const EdgeInsets.all(2),
+                      child: Text("Ascension\nMaterials",
+                      textAlign: TextAlign.center,
                       ),
                     ),
-                    Text("1",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20)),
-                  ],
                 ),
-                SizedBox(width:spacing),
-                Column(
-                  children: [
-                    Container(
-                      child: Image.network('${character.gemFragment}'),
-                      height: imageSize,
-                      width: imageSize,
-                      decoration: BoxDecoration(
-                          color: Color(0xFF3d3e63),
-                          borderRadius: BorderRadius.all(Radius.circular(15))
+                Tab(
+                    child: Padding(
+                      padding: const EdgeInsets.all(2),
+                      child: Text("Talent\nMaterials",
+                      textAlign: TextAlign.center,
                       ),
                     ),
-                    Text("9",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20)),
-                  ],
                 ),
-                SizedBox(width:spacing),
-                Column(
-                  children: [
-                    Container(
-                      child: Image.network('${character.gemChunk}'),
-                      height: imageSize,
-                      width: imageSize,
-                      decoration: BoxDecoration(
-                          color: Color(0xFF3d3e63),
-                          borderRadius: BorderRadius.all(Radius.circular(15))
+                Tab(
+                    child: Padding(
+                      padding: const EdgeInsets.all(2),
+                      child: Text("${character.buildTitle}\nGuide",
+                        textAlign: TextAlign.center,
                       ),
                     ),
-                    Text("9",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20)),
-                  ],
-                ),
-                SizedBox(width:spacing),
-                Column(
-                  children: [
-                    Container(
-                      child: Image.network('${character.gemGemstone}'),
-                      height: imageSize,
-                      width: imageSize,
-                      decoration: BoxDecoration(
-                          color: Color(0xFF3d3e63),
-                          borderRadius: BorderRadius.all(Radius.circular(15))
-                      ),
-                    ),
-                    Text("6",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20)),
-                  ],
                 ),
               ]
-            ),
+            )
           ),
-          SizedBox(height:spacing),
-          // Mob Drops
-          Center(
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Column(
-                    children: [
-                      Container(
-                        child: Image.network('${character.smallMobDrop}'),
-                        height: imageSize,
-                        width: imageSize,
-                        decoration: BoxDecoration(
-                            color: Color(0xFF3d3e63),
-                            borderRadius: BorderRadius.all(Radius.circular(20))
-                        ),
-                      ),
-                      Text("18",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20)),
-                    ],
-                  ),
-                  SizedBox(width:spacing),
-                  Column(
-                    children: [
-                      Container(
-                        child: Image.network('${character.mediumMobDrop}'),
-                        height: imageSize,
-                        width: imageSize,
-                        decoration: BoxDecoration(
-                            color: Color(0xFF3d3e63),
-                            borderRadius: BorderRadius.all(Radius.circular(15))
-                        ),
-                      ),
-                      Text("30",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20)),
-                    ],
-                  ),
-                  SizedBox(width:spacing),
-                  Column(
-                    children: [
-                      Container(
-                        child: Image.network('${character.largeMobDrop}'),
-                        height: imageSize,
-                        width: imageSize,
-                        decoration: BoxDecoration(
-                            color: Color(0xFF3d3e63),
-                            borderRadius: BorderRadius.all(Radius.circular(15))
-                        ),
-                      ),
-                      Text("36",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20)),
-                    ],
-                  ),
-                ]
-            ),
-          ),
-          SizedBox(height:spacing),
-          // Local Specialty + Normal Boss Drop
-          Center(
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                Column(
-                  children: [
-                    Container(
-                      child: Image.network('${character.localSpecialty}'),
-                      height: imageSize,
-                      width: imageSize,
-                      decoration: BoxDecoration(
-                          color: Color(0xFF3d3e63),
-                          borderRadius: BorderRadius.all(Radius.circular(15))
-                      ),
-                    ),
-                    Text("168",
+          body: TabBarView(
+            children: <Widget>[
+              // Character Image
+              /*Center(
+                child: Container(
+                  padding: const EdgeInsets.fromLTRB(10, 15, 10, 15),
+                  child: Image.network('${character.imglink}'),
+                  height: 200,
+                  width: 200,
+                )
+              ),*/
+
+              /*Center(
+                child:
+                  Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Text(
+                        "Ascension Materials",
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
-                            fontSize: 20)),
-                  ],
-                ),
-                SizedBox(width:spacing),
-                Column(
-                  children: [
-                    Container(
-                      child: Image.network('${character.normalBoss}'),
-                      height: imageSize,
-                      width: imageSize,
-                      decoration: BoxDecoration(
-                          color: Color(0xFF3d3e63),
-                          borderRadius: BorderRadius.all(Radius.circular(15))
-                      ),
+                            fontStyle: FontStyle.italic,
+                            fontSize: 20,
+                        ),
                     ),
-                    Text("46",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20)),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          // Talent Materials
-          Center(
-            child:
-            Padding(
-              padding: const EdgeInsets.fromLTRB(10, 30, 10, 10),
-              child: Text("Talent Materials",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontStyle: FontStyle.italic,
-                      fontSize: 20,
                   ),
               ),
-            ),
-          ),
-          // Books
-          Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Column(
-                  children: [
-                    Container(
-                      child: Image.network('${character.teachingsBook}'),
-                      height: imageSize,
-                      width: imageSize,
-                      decoration: BoxDecoration(
-                          color: Color(0xFF3d3e63),
-                          borderRadius: BorderRadius.all(Radius.circular(15))
-                      ),
-                    ),
-                    Text("9",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20)),
-                  ],
-                ),
-                SizedBox(width:spacing),
-                Column(
-                  children: [
-                    Container(
-                      child: Image.network('${character.guideBook}'),
-                      height: imageSize,
-                      width: imageSize,
-                      decoration: BoxDecoration(
-                          color: Color(0xFF3d3e63),
-                          borderRadius: BorderRadius.all(Radius.circular(15))
-                      ),
-                    ),
-                    Text("63",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20)),
-                  ],
-                ),
-                SizedBox(width:spacing),
-                Column(
-                  children: [
-                    Container(
-                      child: Image.network('${character.philosophiesBook}'),
-                      height: imageSize,
-                      width: imageSize,
-                      decoration: BoxDecoration(
-                          color: Color(0xFF3d3e63),
-                          borderRadius: BorderRadius.all(Radius.circular(15))
-                      ),
-                    ),
-                    Text("114",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20)),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          SizedBox(height:spacing),
-          // Mob Drops
-          Center(
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+              */
+              // Ascension Materials
+              Column(
                 children: [
-                  Column(
-                    children: [
-                      Container(
-                        child: Image.network('${character.smallMobDrop}'),
-                        height: imageSize,
-                        width: imageSize,
-                        decoration: BoxDecoration(
-                            color: Color(0xFF3d3e63),
-                            borderRadius: BorderRadius.all(Radius.circular(15))
+                  Center(
+                    child:
+                    Padding(
+                      padding: const EdgeInsets.only(top: 100, bottom: 30),
+                      child: Text(
+                        "Ascension Materials",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontStyle: FontStyle.italic,
+                          fontSize: 25,
                         ),
-                      ),
-                      Text("18",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20)),
-                    ],
-                  ),
-                  SizedBox(width:spacing),
-                  Column(
-                    children: [
-                      Container(
-                        child: Image.network('${character.mediumMobDrop}'),
-                        height: imageSize,
-                        width: imageSize,
-                        decoration: BoxDecoration(
-                            color: Color(0xFF3d3e63),
-                            borderRadius: BorderRadius.all(Radius.circular(15))
-                        ),
-                      ),
-                      Text("30",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20)),
-                    ],
-                  ),
-                  SizedBox(width:spacing),
-                  Column(
-                    children: [
-                      Container(
-                        child: Image.network('${character.largeMobDrop}'),
-                        height: imageSize,
-                        width: imageSize,
-                        decoration: BoxDecoration(
-                            color: Color(0xFF3d3e63),
-                            borderRadius: BorderRadius.all(Radius.circular(15))
-                        ),
-                      ),
-                      Text("36",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20)),
-                    ],
-                  ),
-                ]
-            ),
-          ),
-          SizedBox(height:spacing),
-          // Weekly Boss + Crown
-          Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Column(
-                  children: [
-                    Container(
-                      child: Image.network('${character.weeklyBoss}'),
-                      height: imageSize,
-                      width: imageSize,
-                      decoration: BoxDecoration(
-                          color: Color(0xFF3d3e63),
-                          borderRadius: BorderRadius.all(Radius.circular(15))
                       ),
                     ),
-                    Text("18",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20)),
-                  ],
+                  ),
+                  Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Column(
+                          children: [
+                            Container(
+                              child: Image.network('${character.gemSliver}'),
+                              height: imageSize,
+                              width: imageSize,
+                              decoration: BoxDecoration(
+                                color: Color(0xFF3d3e63),
+                                borderRadius: BorderRadius.all(Radius.circular(15))
+                              ),
+                            ),
+                            Text("1",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20)),
+                          ],
+                        ),
+                        SizedBox(width:spacing),
+                        Column(
+                          children: [
+                            Container(
+                              child: Image.network('${character.gemFragment}'),
+                              height: imageSize,
+                              width: imageSize,
+                              decoration: BoxDecoration(
+                                  color: Color(0xFF3d3e63),
+                                  borderRadius: BorderRadius.all(Radius.circular(15))
+                              ),
+                            ),
+                            Text("9",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20)),
+                          ],
+                        ),
+                        SizedBox(width:spacing),
+                        Column(
+                          children: [
+                            Container(
+                              child: Image.network('${character.gemChunk}'),
+                              height: imageSize,
+                              width: imageSize,
+                              decoration: BoxDecoration(
+                                  color: Color(0xFF3d3e63),
+                                  borderRadius: BorderRadius.all(Radius.circular(15))
+                              ),
+                            ),
+                            Text("9",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20)),
+                          ],
+                        ),
+                        SizedBox(width:spacing),
+                        Column(
+                          children: [
+                            Container(
+                              child: Image.network('${character.gemGemstone}'),
+                              height: imageSize,
+                              width: imageSize,
+                              decoration: BoxDecoration(
+                                  color: Color(0xFF3d3e63),
+                                  borderRadius: BorderRadius.all(Radius.circular(15))
+                              ),
+                            ),
+                            Text("6",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20)),
+                          ],
+                        ),
+                      ]
+                    ),
+                  ),
+                  SizedBox(height:spacing),
+                  // Mob Drops
+                  Center(
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Column(
+                            children: [
+                              Container(
+                                child: Image.network('${character.smallMobDrop}'),
+                                height: imageSize,
+                                width: imageSize,
+                                decoration: BoxDecoration(
+                                    color: Color(0xFF3d3e63),
+                                    borderRadius: BorderRadius.all(Radius.circular(20))
+                                ),
+                              ),
+                              Text("18",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20)),
+                            ],
+                          ),
+                          SizedBox(width:spacing),
+                          Column(
+                            children: [
+                              Container(
+                                child: Image.network('${character.mediumMobDrop}'),
+                                height: imageSize,
+                                width: imageSize,
+                                decoration: BoxDecoration(
+                                    color: Color(0xFF3d3e63),
+                                    borderRadius: BorderRadius.all(Radius.circular(15))
+                                ),
+                              ),
+                              Text("30",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20)),
+                            ],
+                          ),
+                          SizedBox(width:spacing),
+                          Column(
+                            children: [
+                              Container(
+                                child: Image.network('${character.largeMobDrop}'),
+                                height: imageSize,
+                                width: imageSize,
+                                decoration: BoxDecoration(
+                                    color: Color(0xFF3d3e63),
+                                    borderRadius: BorderRadius.all(Radius.circular(15))
+                                ),
+                              ),
+                              Text("36",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20)),
+                            ],
+                          ),
+                        ]
+                    ),
+                  ),
+                  SizedBox(height:spacing),
+                  // Local Specialty + Normal Boss Drop
+                  Center(
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                        Column(
+                          children: [
+                            Container(
+                              child: Image.network('${character.localSpecialty}'),
+                              height: imageSize,
+                              width: imageSize,
+                              decoration: BoxDecoration(
+                                  color: Color(0xFF3d3e63),
+                                  borderRadius: BorderRadius.all(Radius.circular(15))
+                              ),
+                            ),
+                            Text("168",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20)),
+                          ],
+                        ),
+                        SizedBox(width:spacing),
+                        Column(
+                          children: [
+                            Container(
+                              child: Image.network('${character.normalBoss}'),
+                              height: imageSize,
+                              width: imageSize,
+                              decoration: BoxDecoration(
+                                  color: Color(0xFF3d3e63),
+                                  borderRadius: BorderRadius.all(Radius.circular(15))
+                              ),
+                            ),
+                            Text("46",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20)),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              // Talent Materials
+              /*Center(
+                child:
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(10, 30, 10, 10),
+                  child: Text("Talent Materials",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontStyle: FontStyle.italic,
+                          fontSize: 20,
+                      ),
+                  ),
                 ),
-                SizedBox(width:spacing),
-                Column(
-                  children: [
-                    Container(
-                      child: Image.network('https://static.wikia.nocookie.net/gensin-impact/images/0/04/Item_Crown_of_Insight.png'),
-                      height: imageSize,
-                      width: imageSize,
-                      decoration: BoxDecoration(
-                          color: Color(0xFF3d3e63),
-                          borderRadius: BorderRadius.all(Radius.circular(15))
+              ),*/
+              // Talent Materials
+              Column(
+                children: [
+                  Center(
+                    child:
+                    Padding(
+                      padding: const EdgeInsets.only(top: 100, bottom: 30),
+                      child: Text(
+                        "Talent Materials",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontStyle: FontStyle.italic,
+                          fontSize: 25,
+                        ),
                       ),
                     ),
-                    Text("3",
+                  ),
+                  Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Column(
+                          children: [
+                            Container(
+                              child: Image.network('${character.teachingsBook}'),
+                              height: imageSize,
+                              width: imageSize,
+                              decoration: BoxDecoration(
+                                  color: Color(0xFF3d3e63),
+                                  borderRadius: BorderRadius.all(Radius.circular(15))
+                              ),
+                            ),
+                            Text("9",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20)),
+                          ],
+                        ),
+                        SizedBox(width:spacing),
+                        Column(
+                          children: [
+                            Container(
+                              child: Image.network('${character.guideBook}'),
+                              height: imageSize,
+                              width: imageSize,
+                              decoration: BoxDecoration(
+                                  color: Color(0xFF3d3e63),
+                                  borderRadius: BorderRadius.all(Radius.circular(15))
+                              ),
+                            ),
+                            Text("63",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20)),
+                          ],
+                        ),
+                        SizedBox(width:spacing),
+                        Column(
+                          children: [
+                            Container(
+                              child: Image.network('${character.philosophiesBook}'),
+                              height: imageSize,
+                              width: imageSize,
+                              decoration: BoxDecoration(
+                                  color: Color(0xFF3d3e63),
+                                  borderRadius: BorderRadius.all(Radius.circular(15))
+                              ),
+                            ),
+                            Text("114",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20)),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height:spacing),
+                  // Mob Drops
+                  Center(
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Column(
+                            children: [
+                              Container(
+                                child: Image.network('${character.smallMobDrop}'),
+                                height: imageSize,
+                                width: imageSize,
+                                decoration: BoxDecoration(
+                                    color: Color(0xFF3d3e63),
+                                    borderRadius: BorderRadius.all(Radius.circular(15))
+                                ),
+                              ),
+                              Text("18",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20)),
+                            ],
+                          ),
+                          SizedBox(width:spacing),
+                          Column(
+                            children: [
+                              Container(
+                                child: Image.network('${character.mediumMobDrop}'),
+                                height: imageSize,
+                                width: imageSize,
+                                decoration: BoxDecoration(
+                                    color: Color(0xFF3d3e63),
+                                    borderRadius: BorderRadius.all(Radius.circular(15))
+                                ),
+                              ),
+                              Text("30",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20)),
+                            ],
+                          ),
+                          SizedBox(width:spacing),
+                          Column(
+                            children: [
+                              Container(
+                                child: Image.network('${character.largeMobDrop}'),
+                                height: imageSize,
+                                width: imageSize,
+                                decoration: BoxDecoration(
+                                    color: Color(0xFF3d3e63),
+                                    borderRadius: BorderRadius.all(Radius.circular(15))
+                                ),
+                              ),
+                              Text("36",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20)),
+                            ],
+                          ),
+                        ]
+                    ),
+                  ),
+                  SizedBox(height:spacing),
+                  // Weekly Boss + Crown
+                  Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Column(
+                          children: [
+                            Container(
+                              child: Image.network('${character.weeklyBoss}'),
+                              height: imageSize,
+                              width: imageSize,
+                              decoration: BoxDecoration(
+                                  color: Color(0xFF3d3e63),
+                                  borderRadius: BorderRadius.all(Radius.circular(15))
+                              ),
+                            ),
+                            Text("18",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20)),
+                          ],
+                        ),
+                        SizedBox(width:spacing),
+                        Column(
+                          children: [
+                            Container(
+                              child: Image.network('https://static.wikia.nocookie.net/gensin-impact/images/0/04/Item_Crown_of_Insight.png'),
+                              height: imageSize,
+                              width: imageSize,
+                              decoration: BoxDecoration(
+                                  color: Color(0xFF3d3e63),
+                                  borderRadius: BorderRadius.all(Radius.circular(15))
+                              ),
+                            ),
+                            Text("3",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20)),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              // Build
+              Column(
+                children: [
+                  Center(
+                    child:
+                    Padding(
+                      padding: const EdgeInsets.only(top: 100, bottom: 30),
+                      child: Text(
+                        "${character.buildTitle} Guide",
                         style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20)),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          Center(
-            child: Container(
-              padding: const EdgeInsets.fromLTRB(10, 20, 10, 10),
-              child: Text("${character.buildTitle} Guide", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 25.0)),
-            ),
-          ),
-      ]),
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontStyle: FontStyle.italic,
+                          fontSize: 25,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Column(
+                          children: [
+                            Container(
+                              child: Image.network('${character.teachingsBook}'),
+                              height: imageSize,
+                              width: imageSize,
+                              decoration: BoxDecoration(
+                                  color: Color(0xFF3d3e63),
+                                  borderRadius: BorderRadius.all(Radius.circular(15))
+                              ),
+                            ),
+                            Text("9",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20)),
+                          ],
+                        ),
+                        SizedBox(width:spacing),
+                        Column(
+                          children: [
+                            Container(
+                              child: Image.network('${character.guideBook}'),
+                              height: imageSize,
+                              width: imageSize,
+                              decoration: BoxDecoration(
+                                  color: Color(0xFF3d3e63),
+                                  borderRadius: BorderRadius.all(Radius.circular(15))
+                              ),
+                            ),
+                            Text("63",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20)),
+                          ],
+                        ),
+                        SizedBox(width:spacing),
+                        Column(
+                          children: [
+                            Container(
+                              child: Image.network('${character.philosophiesBook}'),
+                              height: imageSize,
+                              width: imageSize,
+                              decoration: BoxDecoration(
+                                  color: Color(0xFF3d3e63),
+                                  borderRadius: BorderRadius.all(Radius.circular(15))
+                              ),
+                            ),
+                            Text("114",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20)),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height:spacing),
+                  // Mob Drops
+                  Center(
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Column(
+                            children: [
+                              Container(
+                                child: Image.network('${character.smallMobDrop}'),
+                                height: imageSize,
+                                width: imageSize,
+                                decoration: BoxDecoration(
+                                    color: Color(0xFF3d3e63),
+                                    borderRadius: BorderRadius.all(Radius.circular(15))
+                                ),
+                              ),
+                              Text("18",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20)),
+                            ],
+                          ),
+                          SizedBox(width:spacing),
+                          Column(
+                            children: [
+                              Container(
+                                child: Image.network('${character.mediumMobDrop}'),
+                                height: imageSize,
+                                width: imageSize,
+                                decoration: BoxDecoration(
+                                    color: Color(0xFF3d3e63),
+                                    borderRadius: BorderRadius.all(Radius.circular(15))
+                                ),
+                              ),
+                              Text("30",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20)),
+                            ],
+                          ),
+                          SizedBox(width:spacing),
+                          Column(
+                            children: [
+                              Container(
+                                child: Image.network('${character.largeMobDrop}'),
+                                height: imageSize,
+                                width: imageSize,
+                                decoration: BoxDecoration(
+                                    color: Color(0xFF3d3e63),
+                                    borderRadius: BorderRadius.all(Radius.circular(15))
+                                ),
+                              ),
+                              Text("36",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20)),
+                            ],
+                          ),
+                        ]
+                    ),
+                  ),
+                  SizedBox(height:spacing),
+                  // Weekly Boss + Crown
+                  Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Column(
+                          children: [
+                            Container(
+                              child: Image.network('${character.weeklyBoss}'),
+                              height: imageSize,
+                              width: imageSize,
+                              decoration: BoxDecoration(
+                                  color: Color(0xFF3d3e63),
+                                  borderRadius: BorderRadius.all(Radius.circular(15))
+                              ),
+                            ),
+                            Text("18",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20)),
+                          ],
+                        ),
+                        SizedBox(width:spacing),
+                        Column(
+                          children: [
+                            Container(
+                              child: Image.network('https://static.wikia.nocookie.net/gensin-impact/images/0/04/Item_Crown_of_Insight.png'),
+                              height: imageSize,
+                              width: imageSize,
+                              decoration: BoxDecoration(
+                                  color: Color(0xFF3d3e63),
+                                  borderRadius: BorderRadius.all(Radius.circular(15))
+                              ),
+                            ),
+                            Text("3",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20)),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+          ]),
+        ),
+      ),
     );
 
           /*Text("Best Weapon", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20)),
