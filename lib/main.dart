@@ -110,7 +110,11 @@ class Character {
   final String circletPriority;
   final String substats;
   final String bestWeapon;
-  final String weaponImg;
+  final String bestWeaponImg;
+  final String secondBestWeapon;
+  final String secondBestWeaponImg;
+  final String thirdBestWeapon;
+  final String thirdBestWeaponImg;
   //Lvl-up Materials
   final String localSpecialty;
   final String gemSliver;
@@ -142,7 +146,11 @@ class Character {
       required this.circletPriority,
       required this.substats,
       required this.bestWeapon,
-      required this.weaponImg,
+      required this.bestWeaponImg,
+      required this.secondBestWeapon,
+      required this.secondBestWeaponImg,
+      required this.thirdBestWeapon,
+      required this.thirdBestWeaponImg,
       required this.localSpecialty,
       required this.gemSliver,
       required this.gemFragment,
@@ -166,17 +174,21 @@ class Character {
         element: 'Geo',
         rarity: '5-star',
         imglink: 'https://static.wikia.nocookie.net/gensin-impact/images/0/00/Character_Albedo_Thumb.png',
-        buildTitle: 'Geo Support Build',
-        artifactSet: '',
-        artifactImg: '',
-        secondArtifactSet: '',
-        secondArtifactImg: '',
-        sandsPriority: '',
-        gobletPriority: '',
-        circletPriority: '',
-        substats: '',
-        bestWeapon: '',
-        weaponImg: '',
+        buildTitle: 'Geo Support',
+        artifactSet: 'Husk of\nOpulent Dreams ',
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Item_Bloom_Times.png',
+        secondArtifactSet: '(4-piece)',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Item_Plume_of_Luxury.png',
+        sandsPriority: 'DEF% or Energy Recharge',
+        gobletPriority: 'Geo DMG Bonus or DEF%',
+        circletPriority: 'DEF%',
+        substats: 'Energy Recharge or DEF%',
+        bestWeapon: 'Cinnabar\nSpindle',
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Weapon_Cinnabar_Spindle.png',
+        secondBestWeapon: 'Harbinger\nof Dawn',
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Weapon_Harbinger_of_Dawn_2nd.png',
+        thirdBestWeapon: 'Primordial\nJade Cutter',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Weapon_Primordial_Jade_Cutter_2nd.png',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Item_Cecilia.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/3/33/Item_Prithiva_Topaz_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Item_Prithiva_Topaz_Fragment.png',
@@ -196,17 +208,21 @@ class Character {
         element: 'Cryo',
         rarity: '5-star',
         imglink: 'https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Character_Aloy_Thumb.png',
-        buildTitle: '',
-        artifactSet: '',
-        artifactImg: '',
-        secondArtifactSet: '',
-        secondArtifactImg: '',
-        sandsPriority: '',
-        gobletPriority: '',
-        circletPriority: '',
-        substats: '',
-        bestWeapon: '',
-        weaponImg: '',
+        buildTitle: 'Cryo Main DPS',
+        artifactSet: "Gladiator's Finale\n(2-piece)",
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Item_Gladiator%27s_Nostalgia.png',
+        secondArtifactSet: 'Blizzard Strayer\n(2-piece)',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Snowswept_Memory.png',
+        sandsPriority: 'ATK%',
+        gobletPriority: 'Cryo DMG Bonus',
+        circletPriority: 'CRIT Rate / CRIT DMG',
+        substats: 'ATK% / CRIT DMG / CRIT Rate',
+        bestWeapon: 'Thundering\nPulse',
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/7/77/Weapon_Thundering_Pulse.png',
+        secondBestWeapon: 'Skyward Harp',
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/1/19/Weapon_Skyward_Harp.png',
+        thirdBestWeapon: 'Rust',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Weapon_Rust.png',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Crystal_Marrow.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/8/87/Item_Shivada_Jade_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Item_Shivada_Jade_Fragment.png',
@@ -226,17 +242,21 @@ class Character {
         element: 'Pyro',
         rarity: '4-star',
         imglink: 'https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Character_Amber_Thumb.png',
-        buildTitle: '',
-        artifactSet: '',
-        artifactImg: '',
-        secondArtifactSet: '',
-        secondArtifactImg: '',
-        sandsPriority: '',
-        gobletPriority: '',
-        circletPriority: '',
-        substats: '',
-        bestWeapon: '',
-        weaponImg: '',
+        buildTitle: 'Critical Aim DPS',
+        artifactSet: "Wanderer's Troupe",
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Item_Troupe%27s_Dawnlight.png',
+        secondArtifactSet: '(4-piece)',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Item_Bard%27s_Arrow_Feather.png',
+        sandsPriority: 'ATK%',
+        gobletPriority: 'Pyro DMG Bonus',
+        circletPriority: 'CRIT Rate or CRIT DMG',
+        substats: 'CRIT Rate / Crit DMG / ATK%',
+        bestWeapon: "Amos' Bow",
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/d/de/Weapon_Amos%27_Bow.png',
+        secondBestWeapon: 'Skyward Harp',
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/1/19/Weapon_Skyward_Harp.png',
+        thirdBestWeapon: 'The Viridescent\nHunt',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Weapon_The_Viridescent_Hunt.png',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Small_Lamp_Grass.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/5/51/Item_Agnidus_Agate_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Item_Agnidus_Agate_Fragment.png',
@@ -256,17 +276,21 @@ class Character {
         element: 'Hydro',
         rarity: '4-star',
         imglink: 'https://static.wikia.nocookie.net/gensin-impact/images/7/72/Character_Barbara_Thumb.png',
-        buildTitle: '',
-        artifactSet: '',
-        artifactImg: '',
-        secondArtifactSet: '',
-        secondArtifactImg: '',
-        sandsPriority: '',
-        gobletPriority: '',
-        circletPriority: '',
-        substats: '',
-        bestWeapon: '',
-        weaponImg: '',
+        buildTitle: 'Healer Hybrid',
+        artifactSet: 'Ocean-Hued\nClam',
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/5/58/Item_Sea-Dyed_Blossom.png',
+        secondArtifactSet: '(4-piece)',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/3/33/Item_Deep_Palace%27s_Plume.png',
+        sandsPriority: 'HP',
+        gobletPriority: 'HP',
+        circletPriority: 'HP or Healing Bonus',
+        substats: 'HP',
+        bestWeapon: 'Prototype\nAmber',
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Weapon_Prototype_Malice_2nd.png',
+        secondBestWeapon: 'Thrilling Tales of\nDragon Slayers',
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/1/19/Weapon_Thrilling_Tales_of_Dragon_Slayers.png',
+        thirdBestWeapon: 'Favonious\nCodex',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Weapon_Favonius_Codex_2nd.png',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Philanemo_Mushroom.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Item_Varunada_Lazurite_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Item_Varunada_Lazurite_Fragment.png',
@@ -286,17 +310,21 @@ class Character {
         element: 'Electro',
         rarity: '4-star',
         imglink: 'https://static.wikia.nocookie.net/gensin-impact/images/6/61/Character_Beidou_Thumb.png',
-        buildTitle: '',
-        artifactSet: '',
-        artifactImg: '',
-        secondArtifactSet: '',
-        secondArtifactImg: '',
-        sandsPriority: '',
-        gobletPriority: '',
-        circletPriority: '',
-        substats: '',
-        bestWeapon: '',
-        weaponImg: '',
+        buildTitle: 'Electro Main DPS',
+        artifactSet: "Gladiator's Finale\n(2-piece)",
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Item_Gladiator%27s_Nostalgia.png',
+        secondArtifactSet: 'Thundering Fury\n(2-piece)',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/5/57/Item_Thunderbird%27s_Mercy.png',
+        sandsPriority: 'ATK% or HP',
+        gobletPriority: 'Electro DMG Bonus / ATK% / HP',
+        circletPriority: 'ATK% / CRIT Rate / CRIT DMG / HP',
+        substats: 'ATK% / Energy Recharge / HP / CRIT Rate / CRIT DMG',
+        bestWeapon: 'The Unforged',
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/3/34/Weapon_The_Unforged_2nd.png',
+        secondBestWeapon: "Wolf's Gravestone",
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Weapon_Wolf%27s_Gravestone.png',
+        thirdBestWeapon: 'Rainslasher',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Weapon_Rainslasher.png',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Noctilucous_Jade.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/3/39/Item_Vajrada_Amethyst_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Item_Vajrada_Amethyst_Fragment.png',
@@ -316,17 +344,21 @@ class Character {
         element: 'Pyro',
         rarity: '4-star',
         imglink: 'https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Character_Bennett_Thumb.png',
-        buildTitle: '',
-        artifactSet: '',
-        artifactImg: '',
-        secondArtifactSet: '',
-        secondArtifactImg: '',
-        sandsPriority: '',
-        gobletPriority: '',
-        circletPriority: '',
-        substats: '',
-        bestWeapon: '',
-        weaponImg: '',
+        buildTitle: 'Pyro Burst Support',
+        artifactSet: 'Noblesse Oblige',
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Royal_Flora.png',
+        secondArtifactSet: '(4-piece)',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Royal_Plume.png',
+        sandsPriority: 'Energy Recharge or HP%',
+        gobletPriority: 'HP%',
+        circletPriority: 'Healing Bonus or HP%',
+        substats: 'Energy Recharge / HP% / ATK%',
+        bestWeapon: 'Skyward Blade',
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/0/03/Weapon_Skyward_Blade.png',
+        secondBestWeapon: 'Aquila Favonia',
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Weapon_Aquila_Favonia_2nd.png',
+        thirdBestWeapon: 'Festering Desire',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/7/70/Weapon_Festering_Desire.png',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Windwheel_Aster.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/5/51/Item_Agnidus_Agate_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Item_Agnidus_Agate_Fragment.png',
@@ -342,51 +374,59 @@ class Character {
         weeklyBoss: 'https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Item_Dvalin%27s_Plume.png',
     ),
     const Character(
-      name: 'Chongyun',
-      element: 'Cryo',
-      rarity: '4-star',
-      imglink: 'https://static.wikia.nocookie.net/gensin-impact/images/6/68/Character_Chongyun_Thumb.png',
-      buildTitle: '',
-      artifactSet: '',
-      artifactImg: '',
-      secondArtifactSet: '',
-      secondArtifactImg: '',
-      sandsPriority: '',
-      gobletPriority: '',
-      circletPriority: '',
-      substats: '',
-      bestWeapon: '',
-      weaponImg: '',
-      localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Item_Cor_Lapis.png',
-      gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/8/87/Item_Shivada_Jade_Sliver.png',
-      gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Item_Shivada_Jade_Fragment.png',
-      gemChunk: 'https://static.wikia.nocookie.net/gensin-impact/images/4/41/Item_Shivada_Jade_Chunk.png',
-      gemGemstone: 'https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Item_Shivada_Jade_Gemstone.png',
-      normalBoss: 'https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Item_Hoarfrost_Core.png',
-      smallMobDrop: 'https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Damaged_Mask.png',
-      mediumMobDrop: 'https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Item_Stained_Mask.png',
-      largeMobDrop: 'https://static.wikia.nocookie.net/gensin-impact/images/9/91/Item_Ominous_Mask.png',
-      teachingsBook: 'https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Item_Teachings_of_Diligence.png',
-      guideBook: 'https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Item_Guide_to_Diligence.png',
-      philosophiesBook: 'https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Item_Philosophies_of_Diligence.png',
-      weeklyBoss: 'https://static.wikia.nocookie.net/gensin-impact/images/0/07/Item_Dvalin%27s_Sigh.png',
+        name: 'Chongyun',
+        element: 'Cryo',
+        rarity: '4-star',
+        imglink: 'https://static.wikia.nocookie.net/gensin-impact/images/6/68/Character_Chongyun_Thumb.png',
+        buildTitle: 'Cryo Main DPS',
+        artifactSet: "Gladiator's Finale\n(2-piece)",
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Item_Gladiator%27s_Nostalgia.png',
+        secondArtifactSet: 'Blizzard Strayer\n(2-piece)',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Snowswept_Memory.png',
+        sandsPriority: 'ATK% or Energy Recharge',
+        gobletPriority: 'Cryo DMG Bonus',
+        circletPriority: 'ATK% / CRIT Rate / CRIT DMG',
+        substats: 'ATK% / CRIT Rate / CRIT DMG / Elemental Mastery',
+        bestWeapon: "Wolf's Gravestone",
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Weapon_Wolf%27s_Gravestone.png',
+        secondBestWeapon: 'Skyward Pride',
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Weapon_Skyward_Pride.png',
+        thirdBestWeapon: 'Prototype Archaic',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Weapon_Prototype_Aminus_2nd.png',
+        localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Item_Cor_Lapis.png',
+        gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/8/87/Item_Shivada_Jade_Sliver.png',
+        gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Item_Shivada_Jade_Fragment.png',
+        gemChunk: 'https://static.wikia.nocookie.net/gensin-impact/images/4/41/Item_Shivada_Jade_Chunk.png',
+        gemGemstone: 'https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Item_Shivada_Jade_Gemstone.png',
+        normalBoss: 'https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Item_Hoarfrost_Core.png',
+        smallMobDrop: 'https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Damaged_Mask.png',
+        mediumMobDrop: 'https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Item_Stained_Mask.png',
+        largeMobDrop: 'https://static.wikia.nocookie.net/gensin-impact/images/9/91/Item_Ominous_Mask.png',
+        teachingsBook: 'https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Item_Teachings_of_Diligence.png',
+        guideBook: 'https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Item_Guide_to_Diligence.png',
+        philosophiesBook: 'https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Item_Philosophies_of_Diligence.png',
+        weeklyBoss: 'https://static.wikia.nocookie.net/gensin-impact/images/0/07/Item_Dvalin%27s_Sigh.png',
     ),
     const Character(
         name: 'Diluc',
         element: 'Pyro',
         rarity: '5-star',
         imglink: 'https://static.wikia.nocookie.net/gensin-impact/images/0/02/Character_Diluc_Thumb.png',
-        buildTitle: '',
-        artifactSet: '',
-        artifactImg: '',
-        secondArtifactSet: '',
-        secondArtifactImg: '',
-        sandsPriority: '',
-        gobletPriority: '',
-        circletPriority: '',
-        substats: '',
-        bestWeapon: '',
-        weaponImg: '',
+        buildTitle: 'Pyro Main DPS',
+        artifactSet: 'Crimson Witch\nof Flames',
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Witch%27s_Flower_of_Blaze.png',
+        secondArtifactSet: '(4-piece)',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Item_Witch%27s_Ever-Burning_Plume.png',
+        sandsPriority: 'ATK% or Elemental Mastery',
+        gobletPriority: 'Pyro DMG Bonus',
+        circletPriority: 'CRIT Rate / CRIT DMG / ATK%',
+        substats: 'ATK% / CRIT DMG / CRIT Rate / Elemental Mastery',
+        bestWeapon: "Wolf's Gravestone",
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Weapon_Wolf%27s_Gravestone.png',
+        secondBestWeapon: 'Skyward Pride',
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Weapon_Skyward_Pride.png',
+        thirdBestWeapon: 'Serpent Spine',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/8/88/Weapon_Serpent_Spine.png',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Small_Lamp_Grass.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/5/51/Item_Agnidus_Agate_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Item_Agnidus_Agate_Fragment.png',
@@ -406,17 +446,21 @@ class Character {
         element: 'Cryo',
         rarity: '4-star',
         imglink: 'https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Character_Diona_Thumb.png',
-        buildTitle: '',
-        artifactSet: '',
-        artifactImg: '',
-        secondArtifactSet: '',
-        secondArtifactImg: '',
-        sandsPriority: '',
-        gobletPriority: '',
-        circletPriority: '',
-        substats: '',
-        bestWeapon: '',
-        weaponImg: '',
+        buildTitle: 'Healer Support',
+        artifactSet: 'Maiden Beloved',
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Item_Maiden%27s_Distant_Love.png',
+        secondArtifactSet: '(4-piece)',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Item_Maiden%27s_Heart-stricken_Infatuation.png',
+        sandsPriority: 'Energy Recharge or HP%',
+        gobletPriority: 'HP%',
+        circletPriority: 'Healing Bonus or HP%',
+        substats: 'Energy Recharge / HP% / HP',
+        bestWeapon: 'Sacrificial Bow',
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Weapon_Sacrificial_Bow.png',
+        secondBestWeapon: 'Favonious Warbow',
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/8/85/Weapon_Favonius_Warbow.png',
+        thirdBestWeapon: 'Recurve Bow',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/8/82/Weapon_Recurve_Bow_2nd.png',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/d/de/Item_Calla_Lily.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/8/87/Item_Shivada_Jade_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Item_Shivada_Jade_Fragment.png',
@@ -436,17 +480,21 @@ class Character {
         element: 'Cryo',
         rarity: '5-star',
         imglink: 'https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Character_Eula_Thumb.png',
-        buildTitle: '',
-        artifactSet: '',
-        artifactImg: '',
-        secondArtifactSet: '',
-        secondArtifactImg: '',
-        sandsPriority: '',
-        gobletPriority: '',
-        circletPriority: '',
-        substats: '',
-        bestWeapon: '',
-        weaponImg: '',
+        buildTitle: 'Physical Main DPS',
+        artifactSet: 'Pale Flame',
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Item_Stainless_Bloom.png',
+        secondArtifactSet: '(4-piece)',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Item_Wise_Doctor%27s_Pinion.png',
+        sandsPriority: 'ATK%',
+        gobletPriority: 'Physical DMG Bonus',
+        circletPriority: 'CRIT Rate or CRIT DMG',
+        substats: 'ATK% / CRIT DMG / CRIT Rate / Energy Recharge',
+        bestWeapon: 'Song of\nBroken Pines',
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/5/55/Weapon_Song_of_Broken_Pines_2nd.png',
+        secondBestWeapon: 'Snow-Tombed\nStarsilver',
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/4/49/Weapon_Snow-Tombed_Starsilver.png',
+        thirdBestWeapon: 'Sacrificial\nGreatsword',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/1/17/Weapon_Sacrificial_Greatsword.png',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/d/de/Item_Dandelion_Seed.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/8/87/Item_Shivada_Jade_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Item_Shivada_Jade_Fragment.png',
@@ -466,17 +514,21 @@ class Character {
         element: 'Electro',
         rarity: '4-star',
         imglink: 'https://static.wikia.nocookie.net/gensin-impact/images/1/14/Character_Fischl_Thumb.png',
-        buildTitle: '',
-        artifactSet: '',
-        artifactImg: '',
-        secondArtifactSet: '',
-        secondArtifactImg: '',
-        sandsPriority: '',
-        gobletPriority: '',
-        circletPriority: '',
-        substats: '',
-        bestWeapon: '',
-        weaponImg: '',
+        buildTitle: 'Electro Support',
+        artifactSet: "Gladiator's Finale\n(2-piece)",
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Item_Gladiator%27s_Nostalgia.png',
+        secondArtifactSet: 'Thundering Fury\n(2-piece)',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/5/57/Item_Thunderbird%27s_Mercy.png',
+        sandsPriority: 'ATK%',
+        gobletPriority: 'Electro DMG Bonus / Physical DMG Bonus / ATK%',
+        circletPriority: 'CRIT Rate or CRIT DMG',
+        substats: 'ATK% / CRIT Rate / CRIT DMG',
+        bestWeapon: 'Skyward Harp',
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/1/19/Weapon_Skyward_Harp.png',
+        secondBestWeapon: 'Elegy for\nthe End',
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/6/61/Weapon_Elegy_for_the_End_2nd.png',
+        thirdBestWeapon: 'The Stringless',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Weapon_The_Stringless_2nd.png',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Small_Lamp_Grass.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/3/39/Item_Vajrada_Amethyst_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Item_Vajrada_Amethyst_Fragment.png',
@@ -496,17 +548,21 @@ class Character {
         element: 'Cryo',
         rarity: '5-star',
         imglink: 'https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Character_Ganyu_Thumb.png',
-        buildTitle: '',
-        artifactSet: '',
-        artifactImg: '',
-        secondArtifactSet: '',
-        secondArtifactImg: '',
-        sandsPriority: '',
-        gobletPriority: '',
-        circletPriority: '',
-        substats: '',
-        bestWeapon: '',
-        weaponImg: '',
+        buildTitle: 'Charge Shot DPS',
+        artifactSet: "Wanderer's Troupe",
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Item_Troupe%27s_Dawnlight.png',
+        secondArtifactSet: '(4-piece)',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Item_Bard%27s_Arrow_Feather.png',
+        sandsPriority: 'ATK% or Energy Recharge',
+        gobletPriority: 'Cryo DMG Bonus',
+        circletPriority: 'CRIT DMG or CRIT Rate',
+        substats: 'ATK% / CRIT DMG / CRIT Rate',
+        bestWeapon: "Amos' Bow",
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/d/de/Weapon_Amos%27_Bow.png',
+        secondBestWeapon: 'Skyward Harp',
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/1/19/Weapon_Skyward_Harp.png',
+        thirdBestWeapon: 'Blackcliff Warbow',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Weapon_Blackcliff_Warbow.png',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Item_Qingxin.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/8/87/Item_Shivada_Jade_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Item_Shivada_Jade_Fragment.png',
@@ -526,17 +582,21 @@ class Character {
         element: 'Pyro',
         rarity: '5-star',
         imglink: 'https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Character_Hu_Tao_Thumb.png',
-        buildTitle: 'Pyro DPS',
-        artifactSet: 'Crimson Witch of Flames',
+        buildTitle: 'Pyro Main DPS',
+        artifactSet: 'Crimson Witch \nof Flames',
         artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Witch%27s_Flower_of_Blaze.png',
-        secondArtifactSet: '',
-        secondArtifactImg: '',
+        secondArtifactSet: '(4-piece)',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Item_Witch%27s_Ever-Burning_Plume.png',
         sandsPriority: 'HP%',
-        gobletPriority: 'HP% / Pyro DMG Bonus',
+        gobletPriority: 'HP% or Pyro DMG Bonus',
         circletPriority: 'HP% / CRIT DMG / CRIT Rate',
         substats: 'HP / CRIT DMG / Crit Rate',
         bestWeapon: 'Staff of Homa',
-        weaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/1/17/Weapon_Staff_of_Homa.png',
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/1/17/Weapon_Staff_of_Homa.png',
+        secondBestWeapon: 'Primordial Jade \nWinged-Spear',
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/8/80/Weapon_Primordial_Jade_Winged-Spear.png',
+        thirdBestWeapon: 'Deathmatch',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/6/69/Weapon_Deathmatch.png',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/3/37/Item_Silk_Flower.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/5/51/Item_Agnidus_Agate_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Item_Agnidus_Agate_Fragment.png',
@@ -556,17 +616,21 @@ class Character {
         element: 'Anemo',
         rarity: '5-star',
         imglink: 'https://static.wikia.nocookie.net/gensin-impact/images/8/89/Character_Jean_Thumb.png',
-        buildTitle: '',
-        artifactSet: '',
-        artifactImg: '',
-        secondArtifactSet: '',
-        secondArtifactImg: '',
-        sandsPriority: '',
-        gobletPriority: '',
-        circletPriority: '',
-        substats: '',
-        bestWeapon: '',
-        weaponImg: '',
+        buildTitle: 'Anemo Sub DPS',
+        artifactSet: "Gladiator's Finale\n(2-piece)",
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Item_Gladiator%27s_Nostalgia.png',
+        secondArtifactSet: 'Viridescent Venerer\n(2-piece)',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/9/90/Item_In_Remembrance_of_Viridescent_Fields.png',
+        sandsPriority: 'ATK%',
+        gobletPriority: 'Anemo DMG Bonus / ATK%',
+        circletPriority: 'CRIT DMG / CRIT Rate / ATK%',
+        substats: 'ATK% / Energy Recharge / CRIT DMG / CRIT Rate',
+        bestWeapon: 'Aquila\nFavonia',
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Weapon_Aquila_Favonia_2nd.png',
+        secondBestWeapon: 'Skyward Blade',
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/0/03/Weapon_Skyward_Blade.png',
+        thirdBestWeapon: 'The Black\nSword',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Weapon_The_Black_Sword.png',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/d/de/Item_Dandelion_Seed.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/9/93/Item_Vayuda_Turquoise_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Vayuda_Turquoise_Fragment.png',
@@ -586,17 +650,21 @@ class Character {
         element: 'Anemo',
         rarity: '5-star',
         imglink: 'https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Character_Kaedehara_Kazuha_Thumb.png',
-        buildTitle: '',
-        artifactSet: '',
-        artifactImg: '',
-        secondArtifactSet: '',
-        secondArtifactImg: '',
-        sandsPriority: '',
-        gobletPriority: '',
-        circletPriority: '',
-        substats: '',
-        bestWeapon: '',
-        weaponImg: '',
+        buildTitle: 'Anemo Sub DPS',
+        artifactSet: 'Viridescent Venerer',
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/9/90/Item_In_Remembrance_of_Viridescent_Fields.png',
+        secondArtifactSet: '(4-piece)',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/4/41/Item_Viridescent_Arrow_Feather.png',
+        sandsPriority: 'Elemental Mastery or Energy Recharge',
+        gobletPriority: 'Anemo DMG Bonus or Elemental Mastery',
+        circletPriority: 'Elemental Mastery',
+        substats: 'ATK% / CRIT DMG / CRIT Rate / Elemental Mastery',
+        bestWeapon: 'Freedom-Sworn',
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Weapon_Freedom-Sworn_2nd.png',
+        secondBestWeapon: 'Iron Sting',
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/3/35/Weapon_Iron_Sting.png',
+        thirdBestWeapon: 'Primordial\nJade Cutter',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Weapon_Primordial_Jade_Cutter_2nd.png',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Item_Sea_Ganoderma.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/9/93/Item_Vayuda_Turquoise_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Vayuda_Turquoise_Fragment.png',
@@ -616,17 +684,21 @@ class Character {
         element: 'Cryo',
         rarity: '4-star',
         imglink: 'https://static.wikia.nocookie.net/gensin-impact/images/3/33/Character_Kaeya_Thumb.png',
-        buildTitle: '',
-        artifactSet: '',
-        artifactImg: '',
-        secondArtifactSet: '',
-        secondArtifactImg: '',
-        sandsPriority: '',
-        gobletPriority: '',
-        circletPriority: '',
-        substats: '',
-        bestWeapon: '',
-        weaponImg: '',
+        buildTitle: 'Cryo Burst Sub DPS',
+        artifactSet: 'Blizzard Strayer\n(2-piece)',
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Snowswept_Memory.png',
+        secondArtifactSet: 'Noblesse Oblige\n(2-piece)',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Royal_Flora.png',
+        sandsPriority: 'Energy Recharge or Elemental Mastery',
+        gobletPriority: 'Cryo DMG Bonus or Elemental Mastery',
+        circletPriority: 'CRIT Rate or CRIT DMG',
+        substats: 'Energy Recharge or Elemental Mastery',
+        bestWeapon: 'Iron Sting',
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/3/35/Weapon_Iron_Sting.png',
+        secondBestWeapon: 'Festering\nDesire',
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/7/70/Weapon_Festering_Desire.png',
+        thirdBestWeapon: 'Favonious\nSword',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Weapon_Favonius_Sword_2nd.png',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/d/de/Item_Calla_Lily.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/8/87/Item_Shivada_Jade_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Item_Shivada_Jade_Fragment.png',
@@ -646,17 +718,21 @@ class Character {
         element: 'Cryo',
         rarity: '5-star',
         imglink: 'https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Character_Kamisato_Ayaka_Thumb.png',
-        buildTitle: '',
-        artifactSet: '',
-        artifactImg: '',
-        secondArtifactSet: '',
-        secondArtifactImg: '',
-        sandsPriority: '',
-        gobletPriority: '',
-        circletPriority: '',
-        substats: '',
-        bestWeapon: '',
-        weaponImg: '',
+        buildTitle: 'Cryo Main DPS',
+        artifactSet: 'Blizzard Strayer',
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Snowswept_Memory.png',
+        secondArtifactSet: '(4-piece)',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Item_Icebreaker%27s_Resolve.png',
+        sandsPriority: 'ATK%',
+        gobletPriority: 'Cryo DMG Bonus',
+        circletPriority: 'CRIT Rate or CRIT DMG',
+        substats: 'ATK% / CRIT DMG / CRIT Rate',
+        bestWeapon: 'Mistsplitter\nReforged',
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/0/09/Weapon_Mistsplitter_Reforged.png',
+        secondBestWeapon: 'Primordial\nJade Cutter',
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Weapon_Primordial_Jade_Cutter_2nd.png',
+        thirdBestWeapon: 'Blackcliff\nLongsword',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Weapon_Blackcliff_Longsword.png',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Item_Sakura_Bloom.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/8/87/Item_Shivada_Jade_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Item_Shivada_Jade_Fragment.png',
@@ -676,17 +752,21 @@ class Character {
         element: 'Electro',
         rarity: '5-star',
         imglink: 'https://static.wikia.nocookie.net/gensin-impact/images/0/06/Character_Keqing_Thumb.png',
-        buildTitle: '',
-        artifactSet: '',
-        artifactImg: '',
-        secondArtifactSet: '',
-        secondArtifactImg: '',
-        sandsPriority: '',
-        gobletPriority: '',
-        circletPriority: '',
-        substats: '',
-        bestWeapon: '',
-        weaponImg: '',
+        buildTitle: 'Electro Main DPS',
+        artifactSet: "Gladiator's Finale\n(2-piece)",
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Item_Gladiator%27s_Nostalgia.png',
+        secondArtifactSet: 'Thundering Fury\n(2-piece)',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/5/57/Item_Thunderbird%27s_Mercy.png',
+        sandsPriority: 'ATK%',
+        gobletPriority: 'ATK% or Electro DMG Bonus',
+        circletPriority: 'ATK% or CRIT Rate',
+        substats: 'ATK% / CRIT Rate / CRIT DMG',
+        bestWeapon: 'Primordial\nJade Cutter',
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Weapon_Primordial_Jade_Cutter_2nd.png',
+        secondBestWeapon: 'Summit Shaper',
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Weapon_Summit_Shaper.png',
+        thirdBestWeapon: 'The Black\nSword',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/4/47/Weapon_The_Black_Sword_2nd.png',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Item_Cor_Lapis.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/3/39/Item_Vajrada_Amethyst_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Item_Vajrada_Amethyst_Fragment.png',
@@ -706,17 +786,21 @@ class Character {
         element: 'Pyro',
         rarity: '5-star',
         imglink: 'https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Character_Klee_Thumb.png',
-        buildTitle: '',
-        artifactSet: '',
-        artifactImg: '',
-        secondArtifactSet: '',
-        secondArtifactImg: '',
-        sandsPriority: '',
-        gobletPriority: '',
-        circletPriority: '',
-        substats: '',
-        bestWeapon: '',
-        weaponImg: '',
+        buildTitle: 'Pyro Main DPS',
+        artifactSet: 'Crimson Witch \nof Flames',
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Witch%27s_Flower_of_Blaze.png',
+        secondArtifactSet: '(4-piece)',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Item_Witch%27s_Ever-Burning_Plume.png',
+        sandsPriority: 'ATK% or Elemental Mastery',
+        gobletPriority: 'Pyro DMG Bonus or Elemental Mastery',
+        circletPriority: 'CRIT Rate or CRIT DMG',
+        substats: 'ATK% / Elemental Mastery / CRIT DMG / CRIT Rate',
+        bestWeapon: 'Lost Prayer to\nthe Sacred Winds',
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon_Lost_Prayer_to_the_Sacred_Winds_2nd.png',
+        secondBestWeapon: 'Dodoco Tales',
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Weapon_Dodoco_Tales_2nd.png',
+        thirdBestWeapon: 'The Widsith',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Weapon_The_Widsith.png',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Philanemo_Mushroom.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/5/51/Item_Agnidus_Agate_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Item_Agnidus_Agate_Fragment.png',
@@ -736,17 +820,21 @@ class Character {
         element: 'Electro',
         rarity: '4-star',
         imglink: 'https://static.wikia.nocookie.net/gensin-impact/images/9/96/Character_Kujou_Sara_Thumb.png',
-        buildTitle: '',
-        artifactSet: '',
-        artifactImg: '',
-        secondArtifactSet: '',
-        secondArtifactImg: '',
-        sandsPriority: '',
-        gobletPriority: '',
-        circletPriority: '',
-        substats: '',
-        bestWeapon: '',
-        weaponImg: '',
+        buildTitle: 'Electro Burst Sub DPS',
+        artifactSet: 'Noblesse Oblige',
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Royal_Flora.png',
+        secondArtifactSet: '(4-piece)',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Royal_Plume.png',
+        sandsPriority: 'ATK% or Energy Recharge',
+        gobletPriority: 'Electro DMG Bonus',
+        circletPriority: 'CRIT Rate or CRIT DMG',
+        substats: 'ATK% / CRIT DMG / CRIT Rate / Energy Recharge',
+        bestWeapon: 'Skyward Harp',
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/1/19/Weapon_Skyward_Harp.png',
+        secondBestWeapon: 'Favonious Warbow',
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/8/85/Weapon_Favonius_Warbow.png',
+        thirdBestWeapon: 'Sacrificial Bow',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Weapon_Sacrificial_Bow.png',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Item_Dendrobium.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/3/39/Item_Vajrada_Amethyst_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Item_Vajrada_Amethyst_Fragment.png',
@@ -766,17 +854,21 @@ class Character {
         element: 'Electro',
         rarity: '4-star',
         imglink:'https://static.wikia.nocookie.net/gensin-impact/images/5/51/Character_Lisa_Thumb.png',
-        buildTitle: '',
-        artifactSet: '',
-        artifactImg: '',
-        secondArtifactSet: '',
-        secondArtifactImg: '',
-        sandsPriority: '',
-        gobletPriority: '',
-        circletPriority: '',
-        substats: '',
-        bestWeapon: '',
-        weaponImg: '',
+        buildTitle: 'Electro Sub DPS',
+        artifactSet: 'Thundering Fury',
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/5/57/Item_Thunderbird%27s_Mercy.png',
+        secondArtifactSet: '(4-piece)',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Item_Survivor_of_Catastrophe.png',
+        sandsPriority: 'Elemental Mastery or Energy Recharge',
+        gobletPriority: 'Electro DMG Bonus or Elemental Mastery',
+        circletPriority: 'ATK% or CRIT Rate',
+        substats: 'Elemental Mastery / Energy Recharge / ATK%',
+        bestWeapon: 'Skyward Atlas',
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/3/33/Weapon_Skyward_Atlas.png',
+        secondBestWeapon: 'The Widsith',
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Weapon_The_Widsith.png',
+        thirdBestWeapon: 'Thrilling Tales\nof Dragon Slayers',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/1/19/Weapon_Thrilling_Tales_of_Dragon_Slayers.png',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Item_Valberry.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/3/39/Item_Vajrada_Amethyst_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Item_Vajrada_Amethyst_Fragment.png',
@@ -796,17 +888,21 @@ class Character {
         element: 'Hydro',
         rarity: '5-star',
         imglink:'https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Character_Mona_Thumb.png',
-        buildTitle: '',
-        artifactSet: '',
-        artifactImg: '',
-        secondArtifactSet: '',
-        secondArtifactImg: '',
-        sandsPriority: '',
-        gobletPriority: '',
-        circletPriority: '',
-        substats: '',
-        bestWeapon: '',
-        weaponImg: '',
+        buildTitle: 'Hydro Burst Sub DPS',
+        artifactSet: 'Noblesse Oblige',
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Royal_Flora.png',
+        secondArtifactSet: '(4-piece)',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Royal_Plume.png',
+        sandsPriority: 'ATK% or Elemental Mastery',
+        gobletPriority: 'Hydro DMG Bonus / ATK% / Elemental Mastery',
+        circletPriority: 'CRIT Rate / CRIT DMG / ATK%',
+        substats: 'CRIT DMG / CRIT Rate / ATK% / Elemental Mastery',
+        bestWeapon: 'The Widsith',
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Weapon_The_Widsith.png',
+        secondBestWeapon: 'Skyward Atlas',
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/3/33/Weapon_Skyward_Atlas.png',
+        thirdBestWeapon: 'Thrilling Tales\nof Dragon Slayers',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/1/19/Weapon_Thrilling_Tales_of_Dragon_Slayers.png',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Philanemo_Mushroom.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Item_Varunada_Lazurite_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Item_Varunada_Lazurite_Fragment.png',
@@ -826,17 +922,21 @@ class Character {
         element: 'Geo',
         rarity: '4-star',
         imglink:'https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Character_Ningguang_Thumb.png',
-        buildTitle: '',
-        artifactSet: '',
-        artifactImg: '',
-        secondArtifactSet: '',
-        secondArtifactImg: '',
-        sandsPriority: '',
-        gobletPriority: '',
-        circletPriority: '',
-        substats: '',
-        bestWeapon: '',
-        weaponImg: '',
+        buildTitle: 'Geo Burst DPS',
+        artifactSet: 'Archaic Petra',
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Item_Flower_of_Creviced_Cliff.png',
+        secondArtifactSet: 'Noblesse Oblige',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Royal_Flora.png',
+        sandsPriority: 'ATK% or Energy Recharge',
+        gobletPriority: 'Geo DMG Bonus or ATK%',
+        circletPriority: 'CRIT Rate / CRIT DMG / ATK%',
+        substats: 'ATK% / CRIT Rate / CRIT DMG / Energy Recharge',
+        bestWeapon: 'Memory\nof Dust',
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Weapon_Memory_of_Dust.png',
+        secondBestWeapon: 'Lost Prayer to\nthe Sacred Winds',
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon_Lost_Prayer_to_the_Sacred_Winds_2nd.png',
+        thirdBestWeapon: 'Solar Pearl',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Weapon_Solar_Pearl.png',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Item_Glaze_Lily.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/3/33/Item_Prithiva_Topaz_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Item_Prithiva_Topaz_Fragment.png',
@@ -856,17 +956,21 @@ class Character {
         element: 'Geo',
         rarity: '4-star',
         imglink:'https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Character_Noelle_Thumb.png',
-        buildTitle: '',
-        artifactSet: '',
-        artifactImg: '',
-        secondArtifactSet: '',
-        secondArtifactImg: '',
-        sandsPriority: '',
-        gobletPriority: '',
-        circletPriority: '',
-        substats: '',
-        bestWeapon: '',
-        weaponImg: '',
+        buildTitle: 'Geo Main DPS',
+        artifactSet: 'Husk of\nOpulent Dreams ',
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Item_Bloom_Times.png',
+        secondArtifactSet: '(4-piece)',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Item_Plume_of_Luxury.png',
+        sandsPriority: 'DEF%',
+        gobletPriority: 'DEF%',
+        circletPriority: 'DEF% or CRIT DMG',
+        substats: 'DEF% or CRIT DMG',
+        bestWeapon: 'The Unforged',
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/3/34/Weapon_The_Unforged_2nd.png',
+        secondBestWeapon: 'The Bell',
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Weapon_The_Bell.png',
+        thirdBestWeapon: 'Whiteblind',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/0/04/Weapon_Whiteblind.png',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Item_Valberry.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/3/33/Item_Prithiva_Topaz_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Item_Prithiva_Topaz_Fragment.png',
@@ -896,7 +1000,11 @@ class Character {
         circletPriority: '',
         substats: '',
         bestWeapon: '',
-        weaponImg: '',
+        bestWeaponImg: '',
+        secondBestWeapon: '',
+        secondBestWeaponImg: '',
+        thirdBestWeapon: '',
+        thirdBestWeaponImg: '',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Item_Violetgrass.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/8/87/Item_Shivada_Jade_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Item_Shivada_Jade_Fragment.png',
@@ -916,17 +1024,21 @@ class Character {
         element: 'Electro',
         rarity: '5-star',
         imglink:'https://static.wikia.nocookie.net/gensin-impact/images/5/52/Character_Raiden_Shogun_Thumb.png',
-        buildTitle: '',
-        artifactSet: '',
-        artifactImg: '',
-        secondArtifactSet: '',
-        secondArtifactImg: '',
-        sandsPriority: '',
-        gobletPriority: '',
-        circletPriority: '',
-        substats: '',
-        bestWeapon: '',
-        weaponImg: '',
+        buildTitle: 'Electro Hybrid DPS',
+        artifactSet: 'Emblem of\nSevered Fate',
+        artifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/5/53/Item_Magnificent_Tsuba.png',
+        secondArtifactSet: '(4-piece)',
+        secondArtifactImg: 'https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Item_Sundered_Feather.png',
+        sandsPriority: 'Energy Recharge or ATK%',
+        gobletPriority: 'Electro DMG Bonus or ATK%',
+        circletPriority: 'CRIT Rate or CRIT DMG',
+        substats: 'ATK% / CRIT DMG / CRIT Rate / Energy Recharge',
+        bestWeapon: 'Engulfing\nLightning',
+        bestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/2/23/Weapon_Engulfing_Lightning_2nd.png',
+        secondBestWeapon: 'Deathmatch',
+        secondBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/6/69/Weapon_Deathmatch.png',
+        thirdBestWeapon: 'The Catch',
+        thirdBestWeaponImg: 'https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Weapon_The_Catch.png',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Amakumo_Fruit.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/3/39/Item_Vajrada_Amethyst_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Item_Vajrada_Amethyst_Fragment.png',
@@ -956,7 +1068,11 @@ class Character {
         circletPriority: '',
         substats: '',
         bestWeapon: '',
-        weaponImg: '',
+        bestWeaponImg: '',
+        secondBestWeapon: '',
+        secondBestWeaponImg: '',
+        thirdBestWeapon: '',
+        thirdBestWeaponImg: '',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/5/57/Item_Wolfhook.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/3/39/Item_Vajrada_Amethyst_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Item_Vajrada_Amethyst_Fragment.png',
@@ -986,7 +1102,11 @@ class Character {
         circletPriority: '',
         substats: '',
         bestWeapon: '',
-        weaponImg: '',
+        bestWeaponImg: '',
+        secondBestWeapon: '',
+        secondBestWeaponImg: '',
+        thirdBestWeapon: '',
+        thirdBestWeaponImg: '',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Item_Valberry.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/8/87/Item_Shivada_Jade_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Item_Shivada_Jade_Fragment.png',
@@ -1016,7 +1136,11 @@ class Character {
         circletPriority: '',
         substats: '',
         bestWeapon: '',
-        weaponImg: '',
+        bestWeaponImg: '',
+        secondBestWeapon: '',
+        secondBestWeaponImg: '',
+        thirdBestWeapon: '',
+        thirdBestWeaponImg: '',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/0/07/Item_Sango_Pearl.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Item_Varunada_Lazurite_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Item_Varunada_Lazurite_Fragment.png',
@@ -1046,7 +1170,11 @@ class Character {
         circletPriority: '',
         substats: '',
         bestWeapon: '',
-        weaponImg: '',
+        bestWeaponImg: '',
+        secondBestWeapon: '',
+        secondBestWeaponImg: '',
+        thirdBestWeapon: '',
+        thirdBestWeaponImg: '',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Crystal_Marrow.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/9/93/Item_Vayuda_Turquoise_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Vayuda_Turquoise_Fragment.png',
@@ -1076,7 +1204,11 @@ class Character {
         circletPriority: '',
         substats: '',
         bestWeapon: '',
-        weaponImg: '',
+        bestWeaponImg: '',
+        secondBestWeapon: '',
+        secondBestWeaponImg: '',
+        thirdBestWeapon: '',
+        thirdBestWeaponImg: '',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Windwheel_Aster.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/9/93/Item_Vayuda_Turquoise_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Vayuda_Turquoise_Fragment.png',
@@ -1106,7 +1238,11 @@ class Character {
         circletPriority: '',
         substats: '',
         bestWeapon: '',
-        weaponImg: '',
+        bestWeaponImg: '',
+        secondBestWeapon: '',
+        secondBestWeaponImg: '',
+        thirdBestWeapon: '',
+        thirdBestWeaponImg: '',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/4/46/Item_Starconch.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Item_Varunada_Lazurite_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Item_Varunada_Lazurite_Fragment.png',
@@ -1136,7 +1272,11 @@ class Character {
       circletPriority: '',
       substats: '',
       bestWeapon: '',
-      weaponImg: '',
+      bestWeaponImg: '',
+      secondBestWeapon: '',
+      secondBestWeaponImg: '',
+      thirdBestWeapon: '',
+      thirdBestWeaponImg: '',
       localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Fluorescent_Fungus.png',
       gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/5/51/Item_Agnidus_Agate_Sliver.png',
       gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Item_Agnidus_Agate_Fragment.png',
@@ -1166,7 +1306,11 @@ class Character {
         circletPriority: '',
         substats: '',
         bestWeapon: '',
-        weaponImg: '',
+        bestWeaponImg: '',
+        secondBestWeapon: '',
+        secondBestWeaponImg: '',
+        thirdBestWeapon: '',
+        thirdBestWeaponImg: '',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Windwheel_Aster.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/7/72/Item_Brilliant_Diamond_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Item_Brilliant_Diamond_Fragment.png',
@@ -1196,7 +1340,11 @@ class Character {
         circletPriority: '',
         substats: '',
         bestWeapon: '',
-        weaponImg: '',
+        bestWeaponImg: '',
+        secondBestWeapon: '',
+        secondBestWeaponImg: '',
+        thirdBestWeapon: '',
+        thirdBestWeaponImg: '',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Item_Cecilia.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/9/93/Item_Vayuda_Turquoise_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Vayuda_Turquoise_Fragment.png',
@@ -1226,7 +1374,11 @@ class Character {
         circletPriority: '',
         substats: '',
         bestWeapon: '',
-        weaponImg: '',
+        bestWeaponImg: '',
+        secondBestWeapon: '',
+        secondBestWeaponImg: '',
+        thirdBestWeapon: '',
+        thirdBestWeaponImg: '',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/1/13/Item_Jueyun_Chili.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/5/51/Item_Agnidus_Agate_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Item_Agnidus_Agate_Fragment.png',
@@ -1256,7 +1408,11 @@ class Character {
         circletPriority: '',
         substats: '',
         bestWeapon: '',
-        weaponImg: '',
+        bestWeaponImg: '',
+        secondBestWeapon: '',
+        secondBestWeaponImg: '',
+        thirdBestWeapon: '',
+        thirdBestWeaponImg: '',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Item_Qingxin.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/9/93/Item_Vayuda_Turquoise_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Vayuda_Turquoise_Fragment.png',
@@ -1286,7 +1442,11 @@ class Character {
         circletPriority: '',
         substats: '',
         bestWeapon: '',
-        weaponImg: '',
+        bestWeaponImg: '',
+        secondBestWeapon: '',
+        secondBestWeaponImg: '',
+        thirdBestWeapon: '',
+        thirdBestWeaponImg: '',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/3/37/Item_Silk_Flower.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Item_Varunada_Lazurite_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Item_Varunada_Lazurite_Fragment.png',
@@ -1316,7 +1476,11 @@ class Character {
         circletPriority: '',
         substats: '',
         bestWeapon: '',
-        weaponImg: '',
+        bestWeaponImg: '',
+        secondBestWeapon: '',
+        secondBestWeaponImg: '',
+        thirdBestWeapon: '',
+        thirdBestWeaponImg: '',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Item_Violetgrass.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/5/51/Item_Agnidus_Agate_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Item_Agnidus_Agate_Fragment.png',
@@ -1346,7 +1510,11 @@ class Character {
         circletPriority: '',
         substats: '',
         bestWeapon: '',
-        weaponImg: '',
+        bestWeaponImg: '',
+        secondBestWeapon: '',
+        secondBestWeaponImg: '',
+        thirdBestWeapon: '',
+        thirdBestWeaponImg: '',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Noctilucous_Jade.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/5/51/Item_Agnidus_Agate_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Item_Agnidus_Agate_Fragment.png',
@@ -1376,7 +1544,11 @@ class Character {
         circletPriority: '',
         substats: '',
         bestWeapon: '',
-        weaponImg: '',
+        bestWeaponImg: '',
+        secondBestWeapon: '',
+        secondBestWeaponImg: '',
+        thirdBestWeapon: '',
+        thirdBestWeaponImg: '',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Item_Naku_Weed.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/5/51/Item_Agnidus_Agate_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Item_Agnidus_Agate_Fragment.png',
@@ -1406,7 +1578,11 @@ class Character {
         circletPriority: '',
         substats: '',
         bestWeapon: '',
-        weaponImg: '',
+        bestWeaponImg: '',
+        secondBestWeapon: '',
+        secondBestWeaponImg: '',
+        thirdBestWeapon: '',
+        thirdBestWeaponImg: '',
         localSpecialty: 'https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Item_Cor_Lapis.png',
         gemSliver: 'https://static.wikia.nocookie.net/gensin-impact/images/3/33/Item_Prithiva_Topaz_Sliver.png',
         gemFragment: 'https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Item_Prithiva_Topaz_Fragment.png',
@@ -1473,6 +1649,7 @@ class Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: (Color(0xFF272852)),
         primarySwatch: createMaterialColor(Color(0xFF272852)),
@@ -1483,13 +1660,17 @@ class Detail extends StatelessWidget {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
+            leading: IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () => Navigator.of(context).pop(),
+            ),
             centerTitle: true,
             title: Text("${character.name}"),
             bottom: TabBar(
-              indicator: BoxDecoration(
+              /*indicator: BoxDecoration(
                 borderRadius: BorderRadius.circular(50),
                   color: Color(0xFF3d3e63),
-              ),
+              ),*/
               tabs: [
                 Tab(
                     child: Padding(
@@ -1510,7 +1691,7 @@ class Detail extends StatelessWidget {
                 Tab(
                     child: Padding(
                       padding: const EdgeInsets.all(2),
-                      child: Text("${character.buildTitle}\nGuide",
+                      child: Text("${character.buildTitle} Guide",
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -1518,671 +1699,666 @@ class Detail extends StatelessWidget {
               ]
             )
           ),
-          body: TabBarView(
+          body: Stack(
             children: <Widget>[
-              // Character Image
-              /*Center(
-                child: Container(
-                  padding: const EdgeInsets.fromLTRB(10, 15, 10, 15),
-                  child: Image.network('${character.imglink}'),
-                  height: 200,
-                  width: 200,
-                )
-              ),*/
-
-              /*Center(
-                child:
-                  Padding(
-                    padding: const EdgeInsets.all(10),
-                    child: Text(
-                        "Ascension Materials",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontStyle: FontStyle.italic,
-                            fontSize: 20,
-                        ),
-                    ),
-                  ),
-              ),
-              */
-              // Ascension Materials
-              Column(
-                children: [
-                  Center(
-                    child:
-                    Padding(
-                      padding: const EdgeInsets.only(top: 100, bottom: 30),
-                      child: Text(
-                        "Ascension Materials",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontStyle: FontStyle.italic,
-                          fontSize: 25,
-                        ),
+              CustomScrollView(
+                slivers: [
+                  SliverAppBar(
+                    flexibleSpace: FlexibleSpaceBar(
+                      background: Stack(
+                        children: <Widget>[
+                          Center(
+                            child: Image.network('${character.imglink}'),
+                          ),
+                          Container(
+                            alignment: Alignment.bottomCenter,
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter,
+                                  colors: <Color>[
+                                    Colors.black.withAlpha(0),
+                                    Colors.black12,
+                                    Colors.black26,
+                                  ]
+                                ),
+                              ),
+                          )
+                        ],
                       ),
                     ),
+                    expandedHeight: MediaQuery.of(context).size.height * 0.305,
                   ),
-                  Center(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Column(
-                          children: [
-                            Container(
-                              child: Image.network('${character.gemSliver}'),
-                              height: imageSize,
-                              width: imageSize,
-                              decoration: BoxDecoration(
-                                color: Color(0xFF3d3e63),
-                                borderRadius: BorderRadius.all(Radius.circular(15))
-                              ),
-                            ),
-                            Text("1",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20)),
-                          ],
-                        ),
-                        SizedBox(width:spacing),
-                        Column(
-                          children: [
-                            Container(
-                              child: Image.network('${character.gemFragment}'),
-                              height: imageSize,
-                              width: imageSize,
-                              decoration: BoxDecoration(
-                                  color: Color(0xFF3d3e63),
-                                  borderRadius: BorderRadius.all(Radius.circular(15))
-                              ),
-                            ),
-                            Text("9",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20)),
-                          ],
-                        ),
-                        SizedBox(width:spacing),
-                        Column(
-                          children: [
-                            Container(
-                              child: Image.network('${character.gemChunk}'),
-                              height: imageSize,
-                              width: imageSize,
-                              decoration: BoxDecoration(
-                                  color: Color(0xFF3d3e63),
-                                  borderRadius: BorderRadius.all(Radius.circular(15))
-                              ),
-                            ),
-                            Text("9",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20)),
-                          ],
-                        ),
-                        SizedBox(width:spacing),
-                        Column(
-                          children: [
-                            Container(
-                              child: Image.network('${character.gemGemstone}'),
-                              height: imageSize,
-                              width: imageSize,
-                              decoration: BoxDecoration(
-                                  color: Color(0xFF3d3e63),
-                                  borderRadius: BorderRadius.all(Radius.circular(15))
-                              ),
-                            ),
-                            Text("6",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20)),
-                          ],
-                        ),
-                      ]
-                    ),
+                  SliverPadding(
+                    padding: const EdgeInsets.all(15),
                   ),
-                  SizedBox(height:spacing),
-                  // Mob Drops
-                  Center(
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Column(
-                            children: [
-                              Container(
-                                child: Image.network('${character.smallMobDrop}'),
-                                height: imageSize,
-                                width: imageSize,
-                                decoration: BoxDecoration(
-                                    color: Color(0xFF3d3e63),
-                                    borderRadius: BorderRadius.all(Radius.circular(20))
+                  new SliverFillRemaining(
+                      child: TabBarView(
+                          children: <Widget>[
+                            // Ascension Materials
+                            Column(
+                              children: [
+                                Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Column(
+                                        children: [
+                                          Container(
+                                            child: Image.network('${character.gemSliver}'),
+                                            height: imageSize,
+                                            width: imageSize,
+                                            decoration: BoxDecoration(
+                                                color: Color(0xFF3d3e63),
+                                                borderRadius: BorderRadius.all(Radius.circular(15))
+                                            ),
+                                          ),
+                                          Text("1",
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 20)),
+                                        ],
+                                      ),
+                                      SizedBox(width:spacing),
+                                      Column(
+                                        children: [
+                                          Container(
+                                            child: Image.network('${character.gemFragment}'),
+                                            height: imageSize,
+                                            width: imageSize,
+                                            decoration: BoxDecoration(
+                                                color: Color(0xFF3d3e63),
+                                                borderRadius: BorderRadius.all(Radius.circular(15))
+                                            ),
+                                          ),
+                                          Text("9",
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 20)),
+                                        ],
+                                      ),
+                                      SizedBox(width:spacing),
+                                      Column(
+                                        children: [
+                                          Container(
+                                            child: Image.network('${character.gemChunk}'),
+                                            height: imageSize,
+                                            width: imageSize,
+                                            decoration: BoxDecoration(
+                                                color: Color(0xFF3d3e63),
+                                                borderRadius: BorderRadius.all(Radius.circular(15))
+                                            ),
+                                          ),
+                                          Text("9",
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 20)),
+                                        ],
+                                      ),
+                                      SizedBox(width:spacing),
+                                      Column(
+                                        children: [
+                                          Container(
+                                            child: Image.network('${character.gemGemstone}'),
+                                            height: imageSize,
+                                            width: imageSize,
+                                            decoration: BoxDecoration(
+                                                color: Color(0xFF3d3e63),
+                                                borderRadius: BorderRadius.all(Radius.circular(15))
+                                            ),
+                                          ),
+                                          Text("6",
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 20)),
+                                        ],
+                                      ),
+                                    ]
                                 ),
-                              ),
-                              Text("18",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20)),
-                            ],
-                          ),
-                          SizedBox(width:spacing),
-                          Column(
-                            children: [
-                              Container(
-                                child: Image.network('${character.mediumMobDrop}'),
-                                height: imageSize,
-                                width: imageSize,
-                                decoration: BoxDecoration(
-                                    color: Color(0xFF3d3e63),
-                                    borderRadius: BorderRadius.all(Radius.circular(15))
+                                SizedBox(height:spacing),
+                                // Mob Drops
+                                Center(
+                                  child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Column(
+                                          children: [
+                                            Container(
+                                              child: Image.network('${character.smallMobDrop}'),
+                                              height: imageSize,
+                                              width: imageSize,
+                                              decoration: BoxDecoration(
+                                                  color: Color(0xFF3d3e63),
+                                                  borderRadius: BorderRadius.all(Radius.circular(20))
+                                              ),
+                                            ),
+                                            Text("18",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 20)),
+                                          ],
+                                        ),
+                                        SizedBox(width:spacing),
+                                        Column(
+                                          children: [
+                                            Container(
+                                              child: Image.network('${character.mediumMobDrop}'),
+                                              height: imageSize,
+                                              width: imageSize,
+                                              decoration: BoxDecoration(
+                                                  color: Color(0xFF3d3e63),
+                                                  borderRadius: BorderRadius.all(Radius.circular(15))
+                                              ),
+                                            ),
+                                            Text("30",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 20)),
+                                          ],
+                                        ),
+                                        SizedBox(width:spacing),
+                                        Column(
+                                          children: [
+                                            Container(
+                                              child: Image.network('${character.largeMobDrop}'),
+                                              height: imageSize,
+                                              width: imageSize,
+                                              decoration: BoxDecoration(
+                                                  color: Color(0xFF3d3e63),
+                                                  borderRadius: BorderRadius.all(Radius.circular(15))
+                                              ),
+                                            ),
+                                            Text("36",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 20)),
+                                          ],
+                                        ),
+                                      ]
+                                  ),
                                 ),
-                              ),
-                              Text("30",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20)),
-                            ],
-                          ),
-                          SizedBox(width:spacing),
-                          Column(
-                            children: [
-                              Container(
-                                child: Image.network('${character.largeMobDrop}'),
-                                height: imageSize,
-                                width: imageSize,
-                                decoration: BoxDecoration(
-                                    color: Color(0xFF3d3e63),
-                                    borderRadius: BorderRadius.all(Radius.circular(15))
+                                SizedBox(height:spacing),
+                                // Local Specialty + Normal Boss Drop
+                                Center(
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Column(
+                                        children: [
+                                          Container(
+                                            child: Image.network('${character.localSpecialty}'),
+                                            height: imageSize,
+                                            width: imageSize,
+                                            decoration: BoxDecoration(
+                                                color: Color(0xFF3d3e63),
+                                                borderRadius: BorderRadius.all(Radius.circular(15))
+                                            ),
+                                          ),
+                                          Text("168",
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 20)),
+                                        ],
+                                      ),
+                                      SizedBox(width:spacing),
+                                      Column(
+                                        children: [
+                                          Container(
+                                            child: Image.network('${character.normalBoss}'),
+                                            height: imageSize,
+                                            width: imageSize,
+                                            decoration: BoxDecoration(
+                                                color: Color(0xFF3d3e63),
+                                                borderRadius: BorderRadius.all(Radius.circular(15))
+                                            ),
+                                          ),
+                                          Text("46",
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 20)),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              Text("36",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20)),
-                            ],
-                          ),
-                        ]
-                    ),
-                  ),
-                  SizedBox(height:spacing),
-                  // Local Specialty + Normal Boss Drop
-                  Center(
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                        Column(
-                          children: [
-                            Container(
-                              child: Image.network('${character.localSpecialty}'),
-                              height: imageSize,
-                              width: imageSize,
-                              decoration: BoxDecoration(
-                                  color: Color(0xFF3d3e63),
-                                  borderRadius: BorderRadius.all(Radius.circular(15))
+                              ],
+                            ),
+                            // Talent Materials
+                            Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Column(
+                                      children: [
+                                        Container(
+                                          child: Image.network('${character.teachingsBook}'),
+                                          height: imageSize,
+                                          width: imageSize,
+                                          decoration: BoxDecoration(
+                                              color: Color(0xFF3d3e63),
+                                              borderRadius: BorderRadius.all(Radius.circular(15))
+                                          ),
+                                        ),
+                                        Text("9",
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 20)),
+                                      ],
+                                    ),
+                                    SizedBox(width:spacing),
+                                    Column(
+                                      children: [
+                                        Container(
+                                          child: Image.network('${character.guideBook}'),
+                                          height: imageSize,
+                                          width: imageSize,
+                                          decoration: BoxDecoration(
+                                              color: Color(0xFF3d3e63),
+                                              borderRadius: BorderRadius.all(Radius.circular(15))
+                                          ),
+                                        ),
+                                        Text("63",
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 20)),
+                                      ],
+                                    ),
+                                    SizedBox(width:spacing),
+                                    Column(
+                                      children: [
+                                        Container(
+                                          child: Image.network('${character.philosophiesBook}'),
+                                          height: imageSize,
+                                          width: imageSize,
+                                          decoration: BoxDecoration(
+                                              color: Color(0xFF3d3e63),
+                                              borderRadius: BorderRadius.all(Radius.circular(15))
+                                          ),
+                                        ),
+                                        Text("114",
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 20)),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height:spacing),
+                                // Mob Drops
+                                Center(
+                                  child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Column(
+                                          children: [
+                                            Container(
+                                              child: Image.network('${character.smallMobDrop}'),
+                                              height: imageSize,
+                                              width: imageSize,
+                                              decoration: BoxDecoration(
+                                                  color: Color(0xFF3d3e63),
+                                                  borderRadius: BorderRadius.all(Radius.circular(15))
+                                              ),
+                                            ),
+                                            Text("18",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 20)),
+                                          ],
+                                        ),
+                                        SizedBox(width:spacing),
+                                        Column(
+                                          children: [
+                                            Container(
+                                              child: Image.network('${character.mediumMobDrop}'),
+                                              height: imageSize,
+                                              width: imageSize,
+                                              decoration: BoxDecoration(
+                                                  color: Color(0xFF3d3e63),
+                                                  borderRadius: BorderRadius.all(Radius.circular(15))
+                                              ),
+                                            ),
+                                            Text("30",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 20)),
+                                          ],
+                                        ),
+                                        SizedBox(width:spacing),
+                                        Column(
+                                          children: [
+                                            Container(
+                                              child: Image.network('${character.largeMobDrop}'),
+                                              height: imageSize,
+                                              width: imageSize,
+                                              decoration: BoxDecoration(
+                                                  color: Color(0xFF3d3e63),
+                                                  borderRadius: BorderRadius.all(Radius.circular(15))
+                                              ),
+                                            ),
+                                            Text("36",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 20)),
+                                          ],
+                                        ),
+                                      ]
+                                  ),
+                                ),
+                                SizedBox(height:spacing),
+                                // Weekly Boss + Crown
+                                Center(
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Column(
+                                        children: [
+                                          Container(
+                                            child: Image.network('${character.weeklyBoss}'),
+                                            height: imageSize,
+                                            width: imageSize,
+                                            decoration: BoxDecoration(
+                                                color: Color(0xFF3d3e63),
+                                                borderRadius: BorderRadius.all(Radius.circular(15))
+                                            ),
+                                          ),
+                                          Text("18",
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 20)),
+                                        ],
+                                      ),
+                                      SizedBox(width:spacing),
+                                      Column(
+                                        children: [
+                                          Container(
+                                            child: Image.network('https://static.wikia.nocookie.net/gensin-impact/images/0/04/Item_Crown_of_Insight.png'),
+                                            height: imageSize,
+                                            width: imageSize,
+                                            decoration: BoxDecoration(
+                                                color: Color(0xFF3d3e63),
+                                                borderRadius: BorderRadius.all(Radius.circular(15))
+                                            ),
+                                          ),
+                                          Text("3",
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 20)),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            // Build
+                            SingleChildScrollView(
+                              child: Column(
+                                children: [
+                                  Padding(
+                                      padding: const EdgeInsets.only(bottom: 15.0),
+                                      child: Text("Best Weapons",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 20,
+                                            fontStyle: FontStyle.italic),
+                                      ),
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Column(
+                                        children: [
+                                          Container(
+                                            child: Image.network('${character.bestWeaponImg}'),
+                                            height: imageSize,
+                                            width: imageSize,
+                                            decoration: BoxDecoration(
+                                                color: Color(0xFF3d3e63),
+                                                borderRadius: BorderRadius.all(Radius.circular(15))
+                                            ),
+                                          ),
+                                          Align(
+                                            alignment: Alignment.center,
+                                            child: Text("${character.bestWeapon}",
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 15),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(width:20),
+                                      Column(
+                                        children: [
+                                          Container(
+                                            child: Image.network('${character.secondBestWeaponImg}'),
+                                            height: imageSize,
+                                            width: imageSize,
+                                            decoration: BoxDecoration(
+                                                color: Color(0xFF3d3e63),
+                                                borderRadius: BorderRadius.all(Radius.circular(15))
+                                            ),
+                                          ),
+                                          Align(
+                                            alignment: Alignment.center,
+                                            child: Text("${character.secondBestWeapon}",
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 15),
+                                              textAlign: TextAlign.center,
+                                             ),
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(width:20),
+                                      Column(
+                                        children: [
+                                          Container(
+                                            child: Image.network('${character.thirdBestWeaponImg}'),
+                                            height: imageSize,
+                                            width: imageSize,
+                                            decoration: BoxDecoration(
+                                                color: Color(0xFF3d3e63),
+                                                borderRadius: BorderRadius.all(Radius.circular(15))
+                                            ),
+                                          ),
+                                          Align(
+                                            alignment: Alignment.center,
+                                            child: Text("${character.thirdBestWeapon}",
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 15),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height:25),
+                                  Padding(
+                                    padding: const EdgeInsets.only(bottom: 15.0),
+                                    child: Text("Artifact Set",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20,
+                                          fontStyle: FontStyle.italic),
+                                    ),
+                                  ),
+                                  Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Column(
+                                          children: [
+                                            Container(
+                                              child: Image.network('${character.artifactImg}'),
+                                              height: imageSize,
+                                              width: imageSize,
+                                              decoration: BoxDecoration(
+                                                  color: Color(0xFF3d3e63),
+                                                  borderRadius: BorderRadius.all(Radius.circular(15))
+                                              ),
+                                            ),
+                                            Align(
+                                              alignment: Alignment.center,
+                                              child: Text("${character.artifactSet}",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 15),
+                                                textAlign: TextAlign.center,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(width:20),
+                                        Column(
+                                          children: [
+                                            Container(
+                                              child: Image.network('${character.secondArtifactImg}'),
+                                              height: imageSize,
+                                              width: imageSize,
+                                              decoration: BoxDecoration(
+                                                  color: Color(0xFF3d3e63),
+                                                  borderRadius: BorderRadius.all(Radius.circular(15))
+                                              ),
+                                            ),
+                                            Align(
+                                              alignment: Alignment.center,
+                                              child: Text("${character.secondArtifactSet}",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 15),
+                                                textAlign: TextAlign.center,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ]
+                                  ),
+                                  SizedBox(height:25),
+                                  Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                           padding: const EdgeInsets.all(20.0),
+                                           child: Text("Sands Priority:  ${character.sandsPriority}",
+                                              style: TextStyle(
+                                                 color: Colors.white70,
+                                                 fontWeight: FontWeight.bold,
+                                                 fontSize: 18,
+                                                  height: 1.5),
+                                           ),
+                                        ),
+                                        Container(
+                                          margin: const EdgeInsets.only(left: 20.0, right: 20.0),
+                                          child: Divider(
+                                            color: Colors.white54,
+                                            height: 2.0,
+                                          )
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(20.0),
+                                          child: Text("Goblet Priority:  ${character.gobletPriority}",
+                                            style: TextStyle(
+                                                color: Colors.white70,
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 18,
+                                                height: 1.5),
+                                          ),
+                                        ),
+                                        Container(
+                                            margin: const EdgeInsets.only(left: 20.0, right: 20.0),
+                                            child: Divider(
+                                              color: Colors.white54,
+                                              height: 4.0,
+                                            )
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(20.0),
+                                          child: Text("Circlet Priority:  ${character.circletPriority}",
+                                            style: TextStyle(
+                                                color: Colors.white70,
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 18,
+                                                height: 1.5),
+                                          ),
+                                        ),
+                                      ]
+                                  ),
+                                  Column(
+                                    mainAxisAlignment: MainAxisAlignment.center, 
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                      children:  [
+                                      Container(
+                                          margin: const EdgeInsets.only(left: 20.0, right: 20.0),
+                                          child: Divider(
+                                            color: Colors.white54,
+                                            height: 4.0,
+                                          )
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.all(15.0),
+                                        child: Text("Substats:",
+                                          style: TextStyle(
+                                            color: Colors.white70,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 18,
+                                            height: 1.0),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(bottom:20.0, left: 20.0, right: 20.0),
+                                        child: Text("${character.substats}",
+                                          style: TextStyle(
+                                            color: Colors.white70,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 18,
+                                            height: 1.5),
+                                            textAlign: TextAlign.center
+                                          ),
+                                      ),
+                                    ]
+                                  ),
+                                ],
                               ),
                             ),
-                            Text("168",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20)),
-                          ],
-                        ),
-                        SizedBox(width:spacing),
-                        Column(
-                          children: [
-                            Container(
-                              child: Image.network('${character.normalBoss}'),
-                              height: imageSize,
-                              width: imageSize,
-                              decoration: BoxDecoration(
-                                  color: Color(0xFF3d3e63),
-                                  borderRadius: BorderRadius.all(Radius.circular(15))
-                              ),
-                            ),
-                            Text("46",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20)),
-                          ],
-                        ),
-                      ],
-                    ),
+                          ]),
                   ),
                 ],
               ),
-              // Talent Materials
-              /*Center(
-                child:
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(10, 30, 10, 10),
-                  child: Text("Talent Materials",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontStyle: FontStyle.italic,
-                          fontSize: 20,
-                      ),
-                  ),
-                ),
-              ),*/
-              // Talent Materials
-              Column(
-                children: [
-                  Center(
-                    child:
-                    Padding(
-                      padding: const EdgeInsets.only(top: 100, bottom: 30),
-                      child: Text(
-                        "Talent Materials",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontStyle: FontStyle.italic,
-                          fontSize: 25,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Center(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Column(
-                          children: [
-                            Container(
-                              child: Image.network('${character.teachingsBook}'),
-                              height: imageSize,
-                              width: imageSize,
-                              decoration: BoxDecoration(
-                                  color: Color(0xFF3d3e63),
-                                  borderRadius: BorderRadius.all(Radius.circular(15))
-                              ),
-                            ),
-                            Text("9",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20)),
-                          ],
-                        ),
-                        SizedBox(width:spacing),
-                        Column(
-                          children: [
-                            Container(
-                              child: Image.network('${character.guideBook}'),
-                              height: imageSize,
-                              width: imageSize,
-                              decoration: BoxDecoration(
-                                  color: Color(0xFF3d3e63),
-                                  borderRadius: BorderRadius.all(Radius.circular(15))
-                              ),
-                            ),
-                            Text("63",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20)),
-                          ],
-                        ),
-                        SizedBox(width:spacing),
-                        Column(
-                          children: [
-                            Container(
-                              child: Image.network('${character.philosophiesBook}'),
-                              height: imageSize,
-                              width: imageSize,
-                              decoration: BoxDecoration(
-                                  color: Color(0xFF3d3e63),
-                                  borderRadius: BorderRadius.all(Radius.circular(15))
-                              ),
-                            ),
-                            Text("114",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20)),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height:spacing),
-                  // Mob Drops
-                  Center(
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Column(
-                            children: [
-                              Container(
-                                child: Image.network('${character.smallMobDrop}'),
-                                height: imageSize,
-                                width: imageSize,
-                                decoration: BoxDecoration(
-                                    color: Color(0xFF3d3e63),
-                                    borderRadius: BorderRadius.all(Radius.circular(15))
-                                ),
-                              ),
-                              Text("18",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20)),
-                            ],
-                          ),
-                          SizedBox(width:spacing),
-                          Column(
-                            children: [
-                              Container(
-                                child: Image.network('${character.mediumMobDrop}'),
-                                height: imageSize,
-                                width: imageSize,
-                                decoration: BoxDecoration(
-                                    color: Color(0xFF3d3e63),
-                                    borderRadius: BorderRadius.all(Radius.circular(15))
-                                ),
-                              ),
-                              Text("30",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20)),
-                            ],
-                          ),
-                          SizedBox(width:spacing),
-                          Column(
-                            children: [
-                              Container(
-                                child: Image.network('${character.largeMobDrop}'),
-                                height: imageSize,
-                                width: imageSize,
-                                decoration: BoxDecoration(
-                                    color: Color(0xFF3d3e63),
-                                    borderRadius: BorderRadius.all(Radius.circular(15))
-                                ),
-                              ),
-                              Text("36",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20)),
-                            ],
-                          ),
-                        ]
-                    ),
-                  ),
-                  SizedBox(height:spacing),
-                  // Weekly Boss + Crown
-                  Center(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Column(
-                          children: [
-                            Container(
-                              child: Image.network('${character.weeklyBoss}'),
-                              height: imageSize,
-                              width: imageSize,
-                              decoration: BoxDecoration(
-                                  color: Color(0xFF3d3e63),
-                                  borderRadius: BorderRadius.all(Radius.circular(15))
-                              ),
-                            ),
-                            Text("18",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20)),
-                          ],
-                        ),
-                        SizedBox(width:spacing),
-                        Column(
-                          children: [
-                            Container(
-                              child: Image.network('https://static.wikia.nocookie.net/gensin-impact/images/0/04/Item_Crown_of_Insight.png'),
-                              height: imageSize,
-                              width: imageSize,
-                              decoration: BoxDecoration(
-                                  color: Color(0xFF3d3e63),
-                                  borderRadius: BorderRadius.all(Radius.circular(15))
-                              ),
-                            ),
-                            Text("3",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20)),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              // Build
-              Column(
-                children: [
-                  Center(
-                    child:
-                    Padding(
-                      padding: const EdgeInsets.only(top: 100, bottom: 30),
-                      child: Text(
-                        "${character.buildTitle} Guide",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontStyle: FontStyle.italic,
-                          fontSize: 25,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Center(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Column(
-                          children: [
-                            Container(
-                              child: Image.network('${character.teachingsBook}'),
-                              height: imageSize,
-                              width: imageSize,
-                              decoration: BoxDecoration(
-                                  color: Color(0xFF3d3e63),
-                                  borderRadius: BorderRadius.all(Radius.circular(15))
-                              ),
-                            ),
-                            Text("9",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20)),
-                          ],
-                        ),
-                        SizedBox(width:spacing),
-                        Column(
-                          children: [
-                            Container(
-                              child: Image.network('${character.guideBook}'),
-                              height: imageSize,
-                              width: imageSize,
-                              decoration: BoxDecoration(
-                                  color: Color(0xFF3d3e63),
-                                  borderRadius: BorderRadius.all(Radius.circular(15))
-                              ),
-                            ),
-                            Text("63",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20)),
-                          ],
-                        ),
-                        SizedBox(width:spacing),
-                        Column(
-                          children: [
-                            Container(
-                              child: Image.network('${character.philosophiesBook}'),
-                              height: imageSize,
-                              width: imageSize,
-                              decoration: BoxDecoration(
-                                  color: Color(0xFF3d3e63),
-                                  borderRadius: BorderRadius.all(Radius.circular(15))
-                              ),
-                            ),
-                            Text("114",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20)),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height:spacing),
-                  // Mob Drops
-                  Center(
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Column(
-                            children: [
-                              Container(
-                                child: Image.network('${character.smallMobDrop}'),
-                                height: imageSize,
-                                width: imageSize,
-                                decoration: BoxDecoration(
-                                    color: Color(0xFF3d3e63),
-                                    borderRadius: BorderRadius.all(Radius.circular(15))
-                                ),
-                              ),
-                              Text("18",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20)),
-                            ],
-                          ),
-                          SizedBox(width:spacing),
-                          Column(
-                            children: [
-                              Container(
-                                child: Image.network('${character.mediumMobDrop}'),
-                                height: imageSize,
-                                width: imageSize,
-                                decoration: BoxDecoration(
-                                    color: Color(0xFF3d3e63),
-                                    borderRadius: BorderRadius.all(Radius.circular(15))
-                                ),
-                              ),
-                              Text("30",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20)),
-                            ],
-                          ),
-                          SizedBox(width:spacing),
-                          Column(
-                            children: [
-                              Container(
-                                child: Image.network('${character.largeMobDrop}'),
-                                height: imageSize,
-                                width: imageSize,
-                                decoration: BoxDecoration(
-                                    color: Color(0xFF3d3e63),
-                                    borderRadius: BorderRadius.all(Radius.circular(15))
-                                ),
-                              ),
-                              Text("36",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20)),
-                            ],
-                          ),
-                        ]
-                    ),
-                  ),
-                  SizedBox(height:spacing),
-                  // Weekly Boss + Crown
-                  Center(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Column(
-                          children: [
-                            Container(
-                              child: Image.network('${character.weeklyBoss}'),
-                              height: imageSize,
-                              width: imageSize,
-                              decoration: BoxDecoration(
-                                  color: Color(0xFF3d3e63),
-                                  borderRadius: BorderRadius.all(Radius.circular(15))
-                              ),
-                            ),
-                            Text("18",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20)),
-                          ],
-                        ),
-                        SizedBox(width:spacing),
-                        Column(
-                          children: [
-                            Container(
-                              child: Image.network('https://static.wikia.nocookie.net/gensin-impact/images/0/04/Item_Crown_of_Insight.png'),
-                              height: imageSize,
-                              width: imageSize,
-                              decoration: BoxDecoration(
-                                  color: Color(0xFF3d3e63),
-                                  borderRadius: BorderRadius.all(Radius.circular(15))
-                              ),
-                            ),
-                            Text("3",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20)),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-          ]),
+            ],
+          ),
         ),
       ),
     );
-
-          /*Text("Best Weapon", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20)),
-          Container(
-            padding: const EdgeInsets.all(10.0),
-            child: Image.network('${character.weaponImg}'),
-            height: 150,
-            width: 150,
-          ),
-          Text("${character.bestWeapon}", style: TextStyle(color: Colors.white, fontSize: 15)),*/
-          /*Center(
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: Text('Back'),
-            ),
-          ),*/
-
   }
 }
