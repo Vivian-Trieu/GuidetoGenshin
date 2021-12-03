@@ -21,6 +21,8 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
+  animated_splash_screen: ^1.1.0
+
   flutter:
     sdk: flutter
 
@@ -30,6 +32,7 @@ dependencies:
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
+
   flutter_test:
     sdk: flutter
 
@@ -39,6 +42,9 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
   uses-material-design: true
+  assets:
+    - assets/icon_foreground.png
+    - assets/splash_icon.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

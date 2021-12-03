@@ -1,15 +1,23 @@
+<!--suppress AndroidDomInspection -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.trieu.mobile_app_project">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="mobile_app_project"
-        android:icon="@mipmap/ic_launcher">
+       android:label="Guide to Genshin"
+       android:icon="@mipmap/ic_launcher"
+       android:versionCode="1"
+       android:versionName="1.0">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"
+            android:allowBackup="false">
             <!-- Specifies an Android theme to apply to this Activity as soon as
                  the Android process has started. This theme is visible to the user
                  while the Flutter UI initializes. After that, this theme continues
