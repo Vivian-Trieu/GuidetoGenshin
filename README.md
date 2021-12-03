@@ -1,16 +1,12 @@
-# mobile_app_project
+# Guide to Genshin
 
-A new Flutter project.
+A simple app to guide you in building Genshin Impact characters.
+Images are sourced from the [Genshin Impact Fandom Wiki](https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki)
 
-## Getting Started
+**How to Install:**
+Right now Guide to Genshin is only available for Android.
+- [Download on the Google Play Store!](https://flutter.dev/docs/cookbook)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**Website**
+Visit the landing page for a full view on the app's features.
+- [Check out the Landing Page!](https://viviandtrieu.wixsite.com/guidetogenshin)
